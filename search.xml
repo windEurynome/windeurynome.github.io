@@ -155,7 +155,13 @@
 <p>Create a new repository, github has reserved your own website.</p>
 <p><code>[githubaccount].github.io</code></p>
 <ul>
-<li>use token to authenticate</li>
+<li>use token to authenticate<ul>
+<li>login your github account</li>
+<li>setting-developer setting</li>
+<li>personal access tokens</li>
+<li>token(classical)</li>
+</ul>
+</li>
 </ul>
 <p>In the root menu, add the follows to the file <strong>_config.yml</strong>.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># install:</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"></span><br><span class="line"># _config.yml</span><br><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: https://[token]@github.com/[githubaccount]/[githubaccount].github.io</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
@@ -7911,5 +7917,738 @@
         <tag>kali2024</tag>
         <tag>pip2</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Reverse Study</title>
+    <url>/2024/12/12/reverse-study/</url>
+    <content><![CDATA[<span id="more"></span><!--toc-->
+
+<blockquote>
+<p> [<a href="https://blog.csdn.net/qq_24481913/article/details/131643283">Reverse]IDA使用保姆级指南_ida查看c代码-CSDN博客</a></p>
+<p>[<a href="https://bbs.kanxue.com/thread-266021.htm">原创]工具使用-IDA从入门到理解-软件逆向-看雪-安全社区|安全招聘|kanxue.com</a></p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Furtherstudy</title>
+    <url>/2025/01/03/furtherstudy/</url>
+    <content><![CDATA[<p>一点相关学习以及知识点补充。</p>
+<span id="more"></span><!--toc-->
+<h1>2025-S1-7</h1>
+<img src="/2025/01/03/furtherstudy/image-20250103101102265.png" class="" title="image-20250103101102265">
+<p><strong>正确答案：A</strong></p>
+<h2 id="分析">分析</h2>
+<blockquote>
+<p><a href="https://mp.weixin.qq.com/s/reNFqs1IfRKpm8C-ErVogw">https://mp.weixin.qq.com/s/reNFqs1IfRKpm8C-ErVogw</a></p>
+</blockquote>
+<p>相对抽象，考虑举反例。</p>
+<p>从外形上看，(1)和(2)与题干条件还是有点相仿的，而(3)和(4)就相对比较独立一点，要求也很严苛，直接要求出现的几个矩阵都可逆，而这就给了我们举反例的空间。要求太苛刻，可能会漏掉一些满足题干条件的矩阵。</p>
+<p>回到题干条件，(3)，(4)成立时，题干等式当然成立，但这并不意味着题干等式成立就一定要求(3)或(4)成立。</p>
+<p>综上考虑，举简单例子。</p>
+<img src="/2025/01/03/furtherstudy/image-20250103101347162.png" class="" title="image-20250103101347162">
+<p>至此，排除法即可解决本题，应选<strong>A</strong>。</p>
+<p>不过，本题还有另一种投机取巧的办法，已经与数学知识无关了。我们通过一个简单的观察，可以发现其实在本题中，(1)<strong>和</strong>(2)<strong>是等价的</strong>，也就是，(1)<strong>正确可以推出</strong>(2)<strong>正确</strong>，<strong>而</strong>(2)<strong>正确也可以推出</strong>(1)<strong>正确</strong>。有了这一点，那么(1)(2)必须同时出现，而如果题目本身没有问题的话，答案就只能选A了。</p>
+<p>下面简单说明一下为什么(1)(2)<strong>等价</strong>。</p>
+<img src="/2025/01/03/furtherstudy/image-20250103101431664.png" class="" title="image-20250103101431664">
+<p>解题大概是可以如此，不过，我在写这道题的解析时是觉得比较棘手的。因为如果想正面说明(1)(2)正确似乎并不那么简单，除了用上一个大家可能并不熟悉的关于矩阵的秩的<strong>西尔维斯特(Sylvester)不等式</strong>之外（当然，这里是简单版本，只是对方阵而言）。</p>
+<img src="/2025/01/03/furtherstudy/image-20250103101712652.png" class="" title="image-20250103101712652">
+<blockquote>
+<p><a href="https://zh.wikipedia.org/wiki/%E8%A5%BF%E5%B0%94%E7%BB%B4%E6%96%AF%E7%89%B9%E7%9F%A9%E9%98%B5">https://zh.wikipedia.org/wiki/西尔维斯特矩阵</a></p>
+</blockquote>
+<p>具体解析：</p>
+<img src="/2025/01/03/furtherstudy/640.webp" class="" title="图片">
+<p>上述是分块矩阵的操作，下面是线性方程组的角度。</p>
+<p><img src="furtherstudy/640-1735871168252-3.webp" alt="图片"><img src="furtherstudy/640-1735871187057-6.webp" alt="图片"></p>
+]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>2025</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>The_Bourne_Identity</title>
+    <url>/2025/03/17/The-Bourne-Identity/</url>
+    <content><![CDATA[<p>主要涉及到强网杯中谍影重重一系列题目的复现。中间涉及的特殊协议以及协议参数拆分还挺有意思的。</p>
+<span id="more"></span><!--toc-->
+<h1>前置准备</h1>
+<h2 id="安装相关">安装相关</h2>
+<ul>
+<li>python中的<code>pyModeS</code>模块</li>
+<li>在线网站：<a href="http://jasonplayne.com:8080/">http://jasonplayne.com:8080/</a></li>
+</ul>
+<h2 id="用到的命令解释">用到的命令解释</h2>
+<ul>
+<li><code>tshark -r &lt;capture_file&gt; -Y &quot;&lt;display_filter&gt;&quot; -T fields -e &lt;field_name&gt;</code>
+<ul>
+<li>-r &lt;capture_file&gt;: 指定要读取的抓包文件（例如，.pcap, .pcapng）。</li>
+<li>-Y “&lt;display_filter&gt;”: 使用 Wireshark 的显示过滤器来选择特定的 TCP 数据包。</li>
+<li>-T fields: 指定输出格式为 “fields”，即只输出指定的字段。</li>
+<li>-e &lt;field_name&gt;: 指定要提取的字段名称。 tcp.payload 或 tcp.data 可以用来提取 TCP payload。</li>
+</ul>
+</li>
+</ul>
+<h1>谍影重重1.0</h1>
+<blockquote>
+<p><a href="https://blog.gztime.cc/posts/2022/fc697ca8/#%E8%B0%8D%E5%BD%B1%E9%87%8D%E9%87%8D">强网杯 2022 Writeup | GZTime’s Blog</a></p>
+<p><a href="http://www.ehangwang.cn/article/detail/post-548934.html">2022年第六届“强网杯”网络安全大赛部分writeup (ehangwang.cn)</a></p>
+</blockquote>
+<ul>
+<li>Route.pcapng</li>
+<li>config.json</li>
+<li>Amazing.zip</li>
+</ul>
+<p><code>Amazing.zip</code>为加密压缩包，加密文件为<code>flag</code>，基本判断通过其他两个文件得到压缩包的解压密码。打开压缩包也得到了明确的提示。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423153123627.png" class="" title="image-20230423153123627">
+<h2 id="vmess协议">vmess协议</h2>
+<blockquote>
+<p>[协议细节 - VMess 协议 - 《Project V（V2RAY）文档手册》 - 书栈网 · BookStack](<a href="https://www.bookstack.cn/read/V2RAY/developer-protocols-vmess.md#VMess">https://www.bookstack.cn/read/V2RAY/developer-protocols-vmess.md#VMess</a> 协议)</p>
+<p><a href="https://github.com/v2fly/v2ray-core">v2fly/v2ray-core: A platform for building proxies to bypass network restrictions. (github.com)</a></p>
+</blockquote>
+<p>主要就是看手册分析协议内容，根据协议定义进行计算。</p>
+<p><strong>时刻注意调用函数的格式，是字符串还是字节！本题基本都是字节。</strong></p>
+<h3 id="协议初始定义">协议初始定义</h3>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423163404592.png" class="" title="image-20230423163404592">
+<h3 id="计算cmd-key以及cmd-iv">计算cmd_key以及cmd_iv</h3>
+<p>根据协议，先把指令部分求解出来。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423154043446.png" class="" title="image-20230423154043446">
+<p>我们的用户ID在<code>config.json</code>中体现。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="attr">&quot;settings&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;clients&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                    <span class="punctuation">&#123;</span></span><br><span class="line">                        <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;b831381d-6324-4d53-ad4f-8cda48b30811&quot;</span></span><br><span class="line">                    <span class="punctuation">&#125;</span></span><br><span class="line">                <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>使用匿名函数<code>lambda</code>把一些本题的常用函数给定义一下，简化调用步骤。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">md5 = <span class="keyword">lambda</span> x: hashlib.md5(x).hexdigest()</span><br><span class="line">vmess_hmac = <span class="keyword">lambda</span> x: hmac.new(client_id, x, hashlib.md5).hexdigest()</span><br></pre></td></tr></table></figure>
+<p>可以从协议定义来看，关键点在<code>M</code>之上。所以我们需要利用<code>hmac</code>值，爆破出关键的时间点<code>M</code>。</p>
+<p><em>但这一步莫名其妙一直没成功，无法爆出需要的时间，所以还有待改进中。不是python版本问题。</em></p>
+<p>根据协议提示，写获取<code>M</code>的函数。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 理论上</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_cmd_iv</span>(<span class="params">time, target_hash</span>):</span><br><span class="line">    <span class="keyword">for</span> t <span class="keyword">in</span> <span class="built_in">range</span>(time - <span class="number">50</span>, time + <span class="number">50</span>):</span><br><span class="line">        cur_hash = vmess_hmac(p64(t))</span><br><span class="line">        <span class="keyword">if</span> cur_hash == target_hash:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;time    = <span class="subst">&#123;t&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span> md5(p64(t, endian=<span class="string">&#x27;big&#x27;</span>) * <span class="number">4</span>)</span><br><span class="line"><span class="comment"># 硬凑版</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_cmd_iv</span>(<span class="params">time, target_hash</span>):</span><br><span class="line">    <span class="keyword">for</span> t <span class="keyword">in</span> <span class="built_in">range</span>(time - <span class="number">50</span>, time + <span class="number">50</span>):</span><br><span class="line">        cur_hash = vmess_hmac(p64(t))</span><br><span class="line">        <span class="comment"># print(t)</span></span><br><span class="line">        <span class="comment"># print(cur_hash)</span></span><br><span class="line">        <span class="keyword">if</span> t == <span class="number">1615528982</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;time     = <span class="subst">&#123;t&#125;</span>&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span> md5(p64(t, endian=<span class="string">&#x27;big&#x27;</span>) * <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p><em>p64()在pwntools库中，需要进行安装。</em></p>
+<p><strong>前置条件，需要找到进行响应的数据包</strong>基本条件：时间较早；数据量较大；存在数据。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423155136573.png" class="" title="image-20230423155136573">
+<p>大概的时间范围，以该流量包中的时间进行时间戳的转换。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423155417341.png" class="" title="image-20230423155417341">
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423155718632.png" class="" title="image-20230423155718632">
+<p>找到参照时间戳为<code>1615528962</code>。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> hmac</span><br><span class="line"><span class="keyword">import</span> uuid</span><br><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">client_id = uuid.UUID(<span class="string">&#x27;b831381d-6324-4d53-ad4f-8cda48b30811&#x27;</span>).<span class="built_in">bytes</span></span><br><span class="line"></span><br><span class="line">md5 = <span class="keyword">lambda</span> x: hashlib.md5(x).hexdigest()</span><br><span class="line">vmess_hmac = <span class="keyword">lambda</span> x: hmac.new(client_id, x, hashlib.md5).hexdigest()</span><br><span class="line"></span><br><span class="line">req = <span class="built_in">bytes</span>.fromhex(<span class="string">&#x27;4dd11f9b04f2b562b9db539d939f1d52&#x27;</span> + <span class="string">&#x27;b48b35bf592c09b21545392f73f6cef91143786464578c1c361aa72f638cd0135f25343555f509aef6c74cd2a2b86ee0a9eb3b93a81a541def4763cc54f91ba02681add1b815e8c50e028c76bde0ee8a9593db88d901066305a51a9586a9e377ee100e7d4d33fcfc0453c86b1998a95275cd9368a68820c2a6a540b6386c146ea7579cfe87b2e459856772efdcf0e4c6ab0f11d018a15561cf409cbc00491d7f4d22b7c486a76a5f2f25fbef503551a0aeb90ad9dd246a9cc5e0d0c0b751eb7b54b0abbfef198b1c4e5e755077469c318f20f3e418af03540811ab5c1ea780c886ea2c903b458a26&#x27;</span>)</span><br><span class="line"><span class="comment"># print(req)</span></span><br><span class="line">cut_time = <span class="number">1615528962</span></span><br><span class="line">target_hash = req[:<span class="number">16</span>].<span class="built_in">hex</span>()</span><br><span class="line"><span class="comment"># print(target_hash)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_cmd_iv</span>(<span class="params">time, target_hash</span>):</span><br><span class="line">    <span class="keyword">for</span> t <span class="keyword">in</span> <span class="built_in">range</span>(time - <span class="number">50</span>, time + <span class="number">50</span>):</span><br><span class="line">        cur_hash = vmess_hmac(p64(t))</span><br><span class="line">        <span class="comment"># print(t)</span></span><br><span class="line">        <span class="comment"># print(cur_hash)</span></span><br><span class="line">        <span class="keyword">if</span> t == <span class="number">1615528982</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;time     = <span class="subst">&#123;t&#125;</span>&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span> md5(p64(t, endian=<span class="string">&#x27;big&#x27;</span>) * <span class="number">4</span>)</span><br><span class="line"></span><br><span class="line">cmd_key = md5(client_id + <span class="string">b&#x27;c48619fe-8f02-49e0-b9e9-edf763e17e21&#x27;</span>)</span><br><span class="line">cmd_iv = get_cmd_iv(cut_time, target_hash)</span><br><span class="line"><span class="comment"># print(type(cmd_iv))</span></span><br><span class="line"><span class="comment"># print(type(cmd_key))</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;cmd_key  = <span class="subst">&#123;cmd_key&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;cmd_iv   = <span class="subst">&#123;cmd_iv&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># time     = 1615528982</span></span><br><span class="line"><span class="comment"># cmd_key  = &quot;b50d916ac0cec067981af8e5f38a758f&quot;</span></span><br><span class="line"><span class="comment"># cmd_iv   = &quot;881eb47d4d3b67b24328c5178c0eedcc&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="对指令部分进行解密">对指令部分进行解密</h3>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423160041040.png" class="" title="image-20230423160041040">
+<p>根据协议手册，我们了解指令部分各字节的所属以及作用。需要注意的是，我们在此解密的数据是指令数据。</p>
+<p>同样的，先利用匿名函数定义所要使用的<code>AES-128-CFB</code>。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">cmd_aes = <span class="keyword">lambda</span>: AES.new(<span class="built_in">bytes</span>.fromhex(cmd_key), AES.MODE_CFB, <span class="built_in">bytes</span>.fromhex(cmd_iv), segment_size=<span class="number">128</span>)</span><br></pre></td></tr></table></figure>
+<p><em><strong>这边得高亮一下，python3中对称密码的使用非常麻烦，因为主要处理的数据都是字节形式，此处注意，不能直接使用b’'来进行转换，会导致长度错误，必须使用<code>bytes.fromhex()</code>进行转换。</strong></em></p>
+<p><em>AES-128的密钥长度必须为16字节，而b’'转换成字节是32字节，所以会导致报错。</em></p>
+<p>校验<code>F</code>部分，使用<code>FNV1a hash</code>。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423161516817.png" class="" title="image-20230423161516817">
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> fnvhash <span class="keyword">import</span> fnv1a_32</span><br><span class="line"><span class="keyword">from</span> Crypto.Cipher <span class="keyword">import</span> AES</span><br><span class="line"><span class="keyword">from</span> Crypto.Util.number <span class="keyword">import</span> *</span><br><span class="line">cmd_aes = <span class="keyword">lambda</span>: AES.new(<span class="built_in">bytes</span>.fromhex(cmd_key), AES.MODE_CFB, <span class="built_in">bytes</span>.fromhex(cmd_iv), segment_size=<span class="number">128</span>)</span><br><span class="line"></span><br><span class="line">cmd = req[<span class="number">16</span>:]</span><br><span class="line">ret = cmd_aes().decrypt(cmd)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;ver      = <span class="subst">&#123;ret[<span class="number">0</span>:<span class="number">1</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;dat_iv   = <span class="subst">&#123;ret[<span class="number">1</span>:<span class="number">17</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;dat_key  = <span class="subst">&#123;ret[<span class="number">17</span>:<span class="number">33</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;v        = <span class="subst">&#123;ret[<span class="number">33</span>:<span class="number">34</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;opt      = <span class="subst">&#123;ret[<span class="number">34</span>]:b&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;p        = <span class="subst">&#123;ret[<span class="number">35</span>:<span class="number">36</span>].<span class="built_in">hex</span>()[<span class="number">0</span>]&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;sec      = <span class="subst">&#123;ret[<span class="number">35</span>:<span class="number">36</span>].<span class="built_in">hex</span>()[<span class="number">1</span>]&#125;</span>&quot;</span>)</span><br><span class="line">p = <span class="built_in">int</span>(ret[<span class="number">35</span>:<span class="number">36</span>].<span class="built_in">hex</span>()[<span class="number">0</span>], <span class="number">16</span>)</span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;cmd      = <span class="subst">&#123;ret[<span class="number">37</span>:<span class="number">38</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;port     = <span class="subst">&#123;bytes_to_long(ret[<span class="number">38</span>:<span class="number">40</span>])&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;type     = <span class="subst">&#123;ret[<span class="number">40</span>:<span class="number">41</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>) <span class="comment">#ipv4</span></span><br><span class="line"><span class="built_in">print</span>()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;host     = <span class="subst">&#123;<span class="string">&#x27;.&#x27;</span>.join(<span class="built_in">str</span>(i) <span class="keyword">for</span> i <span class="keyword">in</span> ret[<span class="number">41</span>:<span class="number">45</span>])&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;rand     = <span class="subst">&#123;ret[<span class="number">45</span>:<span class="number">45</span> + p].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;F        = 0x<span class="subst">&#123;ret[<span class="number">45</span> + p:<span class="number">45</span> + p + <span class="number">4</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;check    = <span class="subst">&#123;<span class="built_in">hex</span>(fnv1a_32(ret[:<span class="number">45</span> + p]))&#125;</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>输出得到：</p>
+<figure class="highlight txt"><table><tr><td class="code"><pre><span class="line">ver      = 01</span><br><span class="line">dat_iv   = 13277f5732da52ada790d87b8829daa9</span><br><span class="line">dat_key  = 5e4a9aa9ba58c7e3ad36fe2499dca259</span><br><span class="line">v        = a2</span><br><span class="line">opt      = 1101</span><br><span class="line">p        = 6</span><br><span class="line">sec      = 3</span><br><span class="line"></span><br><span class="line">cmd      = 01</span><br><span class="line">port     = 5000</span><br><span class="line">type     = 01</span><br><span class="line"></span><br><span class="line">host     = 127.0.0.1</span><br><span class="line">rand     = 1ace7d9bb0b5</span><br><span class="line">F        = 0x39182c03</span><br><span class="line">check    = 0x39182c03</span><br></pre></td></tr></table></figure>
+<h3 id="根据协议协定信息进行解密">根据协议协定信息进行解密</h3>
+<p>切分后得到的协议信息，比较关键的部分主要在<code>dat_iv</code>、<code>dat_key</code>、<code>opt</code>以及<code>sec</code>中。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423161747894.png" class="" title="image-20230423161747894">
+<p>但通过文档发现<code>Opt</code>略显不对，主要因为文档年久失修:)</p>
+<blockquote>
+<p><a href="https://github.com/v2ray/v2ray-core/blob/5dffca84234a74da9e8174f1e0b0af3dfb2a58ce/common/protocol/headers.go">v2ray-core/headers.go at 5dffca84234a74da9e8174f1e0b0af3dfb2a58ce · v2ray/v2ray-core (github.com)</a></p>
+</blockquote>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423162307956.png" class="" title="image-20230423162307956">
+<p>所以<code>Opt</code>部分，主要开启了<code>GlobalPadding</code>、<code>ChunkMasking</code>以及<code>ChunkStream</code>，所以我们得到信息，元数据开启了数据混淆，所以我们客户端和服务端分别需要构造两个<code>Shake</code>实例。并且解密的时候注意<code>Padding</code>。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423163010237.png" class="" title="image-20230423163010237">
+<p>而<code>sec</code>部分，也不出意外的年久失修了:)</p>
+<blockquote>
+<p><a href="https://github.com/v2ray/v2ray-core/blob/5dffca84234a74da9e8174f1e0b0af3dfb2a58ce/common/protocol/headers.proto">https://github.com/v2ray/v2ray-core/blob/5dffca84234a74da9e8174f1e0b0af3dfb2a58ce/common/protocol/headers.proto</a></p>
+</blockquote>
+<p><code>sec=3</code>的情况下，我们应该选择<code>AES-128-GCM</code>进行解密。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230421135041930.png" class="" title="image-20230421135041930">
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423163043222.png" class="" title="image-20230423163043222">
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> Crypto.Hash <span class="keyword">import</span> SHAKE128</span><br><span class="line"><span class="comment"># 协议初始定义中体现</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SizeParser</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, nonce</span>):</span><br><span class="line">        self.shake = SHAKE128.new(nonce)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">next</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> bytes_to_long(self.shake.read(<span class="number">2</span>))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">enc</span>(<span class="params">self, size</span>):</span><br><span class="line">        <span class="keyword">return</span> self.<span class="built_in">next</span>() ^ size</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">dec</span>(<span class="params">self, size</span>):</span><br><span class="line">        <span class="keyword">return</span> self.<span class="built_in">next</span>() ^ size</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">next_padding</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.<span class="built_in">next</span>() % <span class="number">64</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;------------------------------------------------&#x27;</span>)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">decrypt</span>(<span class="params">arr, key, iv</span>):</span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    parser = SizeParser(iv)</span><br><span class="line">    output = []</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;dat_iv   = <span class="subst">&#123;key.<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;dat_key  = <span class="subst">&#123;iv.<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="built_in">len</span>(arr) &gt; <span class="number">0</span>:</span><br><span class="line">        padding = parser.next_padding()</span><br><span class="line">        L = parser.dec(bytes_to_long(arr[:<span class="number">2</span>])) - padding</span><br><span class="line"></span><br><span class="line">        arr = arr[<span class="number">2</span>:]</span><br><span class="line">        e_iv = p64(count, endian=<span class="string">&#x27;big&#x27;</span>)[<span class="number">6</span>:] + iv[<span class="number">2</span>:<span class="number">12</span>]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            dec = AES.new(key, AES.MODE_GCM, e_iv).decrypt_and_verify(arr[:L-<span class="number">16</span>], arr[L-<span class="number">16</span>:L])</span><br><span class="line">            output.append(dec)</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;[!] Decryption failed!&#x27;</span>)</span><br><span class="line">        <span class="keyword">finally</span>:</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">            arr = arr[L + padding:]</span><br><span class="line">    <span class="keyword">return</span> output</span><br><span class="line"></span><br><span class="line">data = cmd[<span class="number">45</span> + p + <span class="number">4</span>:]</span><br><span class="line">data_iv = ret[<span class="number">1</span>:<span class="number">17</span>]</span><br><span class="line">data_key = ret[<span class="number">17</span>:<span class="number">33</span>]</span><br><span class="line"><span class="comment"># print(type(data_key))</span></span><br><span class="line">pprint(decrypt(data, data_key, data_iv)[<span class="number">0</span>].decode().split(<span class="string">&#x27;\r\n&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<p>得到输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dat_iv   = 5e4a9aa9ba58c7e3ad36fe2499dca259</span><br><span class="line">dat_key  = 13277f5732da52ada790d87b8829daa9</span><br><span class="line">[&#x27;GET /out HTTP/1.1&#x27;,</span><br><span class="line"> &#x27;Host: 127.0.0.1:5000&#x27;,</span><br><span class="line"> &#x27;User-Agent: curl/7.75.0&#x27;,</span><br><span class="line"> &#x27;Accept: */*&#x27;,</span><br><span class="line"> &#x27;Connection: close&#x27;,</span><br><span class="line"> &#x27;&#x27;,</span><br><span class="line"> &#x27;&#x27;]</span><br></pre></td></tr></table></figure>
+<h3 id="将所有响应数据进行解密">将所有响应数据进行解密</h3>
+<p><strong>插播，前面都是请求数据，本部分为响应数据。</strong></p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423163848309.png" class="" title="image-20230423163848309">
+<p>响应数据依旧使用<code>AES-128-CFB</code>进行解密。</p>
+<p>响应数据我们如何得到？直接利用<code>Wireshark</code>追踪数据流功能进行查看。先转换成原始数据，再把所有蓝色数据导出即可。保存为<code>res.bytes</code>。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423164122895.png" class="" title="image-20230423164122895">
+<p>依旧根据协议定义对解密后的数据进行切分提取。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">res = <span class="built_in">open</span>(<span class="string">&#x27;res.bytes&#x27;</span>, <span class="string">&#x27;rb&#x27;</span>).read()</span><br><span class="line"><span class="comment"># print(res)</span></span><br><span class="line">res_key = md5(data_key)</span><br><span class="line">res_iv = md5(data_iv)</span><br><span class="line"><span class="comment"># print(res_key)</span></span><br><span class="line"><span class="comment"># print(res_iv)</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;res_key  = <span class="subst">&#123;res_key&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;res_iv   = <span class="subst">&#123;res_iv&#125;</span>&quot;</span>)</span><br><span class="line">res_aes = <span class="keyword">lambda</span>: AES.new(<span class="built_in">bytes</span>.fromhex(res_key), AES.MODE_CFB, <span class="built_in">bytes</span>.fromhex(res_iv), segment_size=<span class="number">128</span>)</span><br><span class="line">dec_res = res_aes().decrypt(res[:<span class="number">16</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;v        = <span class="subst">&#123;dec_res[<span class="number">0</span>:<span class="number">1</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;opt      = <span class="subst">&#123;dec_res[<span class="number">1</span>:<span class="number">2</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;cmd      = <span class="subst">&#123;dec_res[<span class="number">2</span>:<span class="number">3</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;c_l      = <span class="subst">&#123;dec_res[<span class="number">3</span>:<span class="number">4</span>].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line">cmd_len = <span class="built_in">int</span>(dec_res[<span class="number">3</span>:<span class="number">4</span>].<span class="built_in">hex</span>(), <span class="number">16</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;cmd      = <span class="subst">&#123;dec_res[<span class="number">4</span>:<span class="number">4</span>+cmd_len].<span class="built_in">hex</span>()&#125;</span>&quot;</span>)</span><br><span class="line">data = res[<span class="number">4</span> + cmd_len:]</span><br><span class="line">plaintext = decrypt(data, <span class="built_in">bytes</span>.fromhex(res_key), <span class="built_in">bytes</span>.fromhex(res_iv))</span><br></pre></td></tr></table></figure>
+<p>输出得到：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">res_key  = b22984cda4143a919b5b6de8121b6159</span><br><span class="line">res_iv   = fa2a8ab0fadb4854943df690335a99b5</span><br><span class="line">v        = a2</span><br><span class="line">opt      = 00</span><br><span class="line">cmd      = 00</span><br><span class="line">c_l      = 00</span><br><span class="line">cmd      = </span><br><span class="line">dat_iv   = b22984cda4143a919b5b6de8121b6159</span><br><span class="line">dat_key  = fa2a8ab0fadb4854943df690335a99b5</span><br></pre></td></tr></table></figure>
+<h3 id="解密之后所得文件">解密之后所得文件</h3>
+<p>解密所得文件为一个 html 文件，其中以 base64 编码存放有一份宏病毒。因此这里取出其内容，实测电脑中的杀毒软件对此病毒十分敏感，一旦落入文件系统文件立刻会被损坏，最后为了查看内容直接存储为 zip 文件解压后查看。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> base64 <span class="keyword">import</span> b64decode</span><br><span class="line">data = <span class="string">&#x27;&#x27;</span>.join(i.decode() <span class="keyword">for</span> i <span class="keyword">in</span> plaintext)</span><br><span class="line">start = data.find(<span class="string">&quot;atob(&#x27;&quot;</span>) + <span class="built_in">len</span>(<span class="string">&quot;atob(&#x27;&quot;</span>)</span><br><span class="line">end = data.find(<span class="string">&quot;&#x27;);&quot;</span>, start)</span><br><span class="line"></span><br><span class="line">binary = b64decode(data[start:end])</span><br><span class="line">check_sum = hashlib.sha256(binary).hexdigest()</span><br><span class="line"></span><br><span class="line"><span class="built_in">open</span>(<span class="string">&#x27;doc.zip&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>).write(binary)</span><br></pre></td></tr></table></figure>
+<p><em>这一步，如此如此这般这般就得到html文件，并且为宏病毒文件。暂且缘由不太理解，先放着。</em></p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230421105016271.png" class="" title="image-20230421105016271">
+<h3 id="利用病毒sha256值反向查找">利用病毒sha256值反向查找</h3>
+<p>把zip文件直接放<code>foremost</code>分析一下，能够得到病毒的dll。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ sha256sum 00000277.dll</span><br><span class="line">0d7aa23a72d22dcf47f8723c58d101b3b113cbc79dd407a6fac0e65d67076ea1  00000277.dll</span><br></pre></td></tr></table></figure>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230423172325054.png" class="" title="image-20230423172325054">
+<p>检索得到：<a href="https://any.run/report/0d7aa23a72d22dcf47f8723c58d101b3b113cbc79dd407a6fac0e65d67076ea1/2211f4a0-81e4-432d-87a8-c7c285a5a919">Malware analysis extracted_at_0x22a7b.exe Malicious activity | ANY.RUN - Malware Sandbox Online</a></p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230421150620900.png" class="" title="image-20230421150620900">
+<p>得到api的<code>url</code>为<code>http://api.ipify.org</code></p>
+<p>md5得到压缩密码为<code>08229f4052dde89671134f1784bed2d6</code></p>
+<p>得到<code>flag</code>文件。</p>
+<h2 id="go文件">go文件</h2>
+<p>得到的文件使用<code>WINHEX</code>打开一下，发现提示了文件类型，是<code>Gob</code>文件</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230421151511429.png" class="" title="image-20230421151511429">
+<p>利用属性来进行定义，从而反序列化。</p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230421152349138.png" class="" title="image-20230421152349138">
+<p>导包的时候出现了<code>missing path</code>，找了报错原因，没解决，后来发现是因为格式错了。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;math/rand&quot;</span></span><br><span class="line">	<span class="string">&quot;time&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><em>然后脚本的原理暂且还不太理解，先放着。</em></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;math/rand&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">	<span class="string">&quot;time&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="comment">//seed init</span></span><br><span class="line">	loc, _ := time.LoadLocation(<span class="string">&quot;Local&quot;</span>)</span><br><span class="line">	timeObj, _ := time.ParseInLocation(</span><br><span class="line">		<span class="string">&quot;2006-01-02 15:04:05&quot;</span>,</span><br><span class="line">		<span class="string">&quot;2022-07-19 14:49:56&quot;</span>, loc)</span><br><span class="line">	seed := timeObj.Unix()</span><br><span class="line">	rand.Seed(seed)</span><br><span class="line"></span><br><span class="line">	input, _ := os.Open(<span class="string">&quot;./src.png&quot;</span>)</span><br><span class="line">	in := <span class="built_in">make</span>([]<span class="type">byte</span>, <span class="number">70475</span>)</span><br><span class="line">	lenx, _ := input.Read(in)</span><br><span class="line">	table := <span class="built_in">make</span>([]<span class="type">int</span>, lenx)</span><br><span class="line">	out := <span class="built_in">make</span>([]<span class="type">byte</span>, lenx)</span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; lenx; i++ &#123;</span><br><span class="line">		table[i] = i</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//shuffle</span></span><br><span class="line">	rand.Shuffle(<span class="built_in">len</span>(table), <span class="function"><span class="keyword">func</span><span class="params">(i, j <span class="type">int</span>)</span></span> &#123;</span><br><span class="line">		table[i], table[j] = table[j], table[i]</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> i := <span class="number">0</span>; i &lt; lenx; i++ &#123;</span><br><span class="line">		out[table[i]] = in[i]</span><br><span class="line">	&#125;</span><br><span class="line">	output, _ := os.Create(<span class="string">&quot;./flag.png&quot;</span>)</span><br><span class="line">	output.Write(out)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>得到图片。</p>
+<img src="/2025/03/17/The-Bourne-Identity/flag.png" class="" title="flag">
+<h2 id="图片隐写">图片隐写</h2>
+<p><em>搞出一张图片了，但没明白为啥图片的大小就是<code>70450bytes</code>，有点迷惑。</em></p>
+<img src="/2025/03/17/The-Bourne-Identity/image-20230421155213728.png" class="" title="image-20230421155213728">
+<p>没找到合适的工具提取隐写，十有八九是提取像素点的。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">img = Image.<span class="built_in">open</span>(<span class="string">&#x27;flag.png&#x27;</span>)</span><br><span class="line">arr = np.array(img)</span><br><span class="line"></span><br><span class="line">ans = <span class="built_in">bytes</span>(arr[:, :, <span class="number">3</span>].reshape(<span class="number">2000</span> * <span class="number">973</span>)).replace(<span class="string">b&#x27;\xff&#x27;</span>, <span class="string">b&#x27;&#x27;</span>).replace(<span class="string">b&#x27;\x00&#x27;</span>, <span class="string">b&#x27;&#x27;</span>).decode()[:<span class="number">42</span>]</span><br><span class="line"><span class="built_in">print</span>(ans)</span><br><span class="line"><span class="comment"># flag&#123;898161df-fabf-4757-82b6-ffe407c69475&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># from PIL import Image</span></span><br><span class="line"><span class="comment"># pic = Image.open(&#x27;flag.png&#x27;)</span></span><br><span class="line"><span class="comment"># w, h = pic.size</span></span><br><span class="line"><span class="comment"># flag = []</span></span><br><span class="line"><span class="comment"># for i in range(h):</span></span><br><span class="line"><span class="comment">#     for j in range(w):</span></span><br><span class="line"><span class="comment">#         piexl = list(pic.getpixel((j, i)))[3]</span></span><br><span class="line"><span class="comment">#         if(piexl != 0xff):</span></span><br><span class="line"><span class="comment">#             flag.append(chr(int(piexl)))</span></span><br><span class="line"><span class="comment">#             if len(flag) == 42:</span></span><br><span class="line"><span class="comment">#                 print(&#x27;&#x27;.join(flag))</span></span><br></pre></td></tr></table></figure>
+<h1>谍影重重2.0</h1>
+<ul>
+<li>使用如下命令，把tcp包中的tcp的payload部分的data提取出来，并使用正则表达式进行数据简单清洗。</li>
+</ul>
+<p><code>tshark -r attach.pcapng -T fields -e tcp.payload | sed '/^\s*$/d' &gt; tcp_output.txt</code></p>
+<ul>
+<li>直接利用ADS-B的流量拆分，求解出最快速度飞机对应的<code>ICAO</code></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pyModeS <span class="keyword">as</span> pms</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;tcp_output.txt&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    data = f.read()</span><br><span class="line">    data = [s <span class="keyword">for</span> s <span class="keyword">in</span> data.splitlines() <span class="keyword">if</span> s != <span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    <span class="comment"># print(data)</span></span><br><span class="line">    v_max = [<span class="number">0</span>, <span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    <span class="keyword">for</span> d <span class="keyword">in</span> data:</span><br><span class="line">        <span class="comment"># print(pms.tell(d[18:]))</span></span><br><span class="line">        <span class="comment"># print(len(d)) # 长度为46的时候可以解密出数据</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(d) != <span class="number">46</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        msg = d[<span class="number">18</span>:]</span><br><span class="line">        icao = pms.icao(msg)</span><br><span class="line">        <span class="built_in">print</span>(icao)</span><br><span class="line">        pms.tell(msg)</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            v = pms.adsb.velocity(msg)</span><br><span class="line">            <span class="built_in">print</span>(v)</span><br><span class="line">            <span class="keyword">if</span> v[<span class="number">0</span>] &gt; v_max[<span class="number">0</span>]:</span><br><span class="line">                v_max = [v[<span class="number">0</span>], icao]</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;===============&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(v_max)</span><br><span class="line"><span class="comment"># 提交的答案是ICAO对应大写形式的md5值。</span></span><br></pre></td></tr></table></figure>
+<h1>谍影重重3.0</h1>
+<h2 id="关键信息">关键信息</h2>
+<ul>
+<li>
+<p>Shadowsocks 采用流加密，sslocal 和 ssserver 各有 1 个加密流，其密文格式为 <code>[IV][encrypted payload]</code>。其中，AES 系列加密方式的 IV 长度均为 16 字节。</p>
+</li>
+<li>
+<p>当用户通过 Shadowsocks 进行 TCP 通信时，首先由 sslocal 发出请求，其明文格式为 <code>[target address][payload]</code>。其中，<code>target address</code> 和 SOCKS5 协议的请求部分很相似，但是只包含 <code>ATYP</code>、<code>DST.ADDR</code>、<code>DST.PORT</code> 这 3 个字段，即 <code>[1-byte type][variable-length host][2-byte port]</code>。ssserver 直接对来自目标服务器的响应进行流加密，发送给 sslocal。</p>
+</li>
+<li>
+<p>UDP 通信的过程略有不同。和 <code>VMess</code> 这种纯 TCP 协议不同，Shadowsocks 的 UDP 和 TCP 是分别传输的，通过 TCP 传输 TCP，通过 UDP 传输 UDP。（PS. 如果用户用 docker 运行 Shadowsocks，一个常见的配置错误就是忘记进行 UDP 端口转发。如果 VPS 平台带防火墙，很多用户也会经常忘记放行 UDP 流量。）在报文方面 UDP 和 TCP 也有区别。Shadowsocks 的 UDP 响应头部会重复客户端的目标地址部分，即请求和响应格式均为 <code>[target address][payload]</code>。</p>
+</li>
+</ul>
+<h1>references</h1>
+<ul>
+<li><a href="https://www.cnblogs.com/Smera1d0/p/17919433.html">强网杯2023 谍影重重2.0 wp - Smera1d0 - 博客园</a></li>
+<li><a href="https://www.cnblogs.com/Smera1d0/p/17922058.html">强网杯2023 谍影重重3.0 wp - Smera1d0 - 博客园</a></li>
+<li><a href="https://mode-s.org/decode/content/ads-b/1-basics.html">https://mode-s.org/decode/content/ads-b/1-basics.html</a></li>
+<li><a href="https://phuker.github.io/posts/shadowsocks-active-probing.html">https://phuker.github.io/posts/shadowsocks-active-probing.html</a></li>
+<li><a href="https://github.com/DeepLabCut/DeepLabCut/issues/2624">https://github.com/DeepLabCut/DeepLabCut/issues/2624</a></li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Misc</category>
+      </categories>
+      <tags>
+        <tag>wireshark</tag>
+        <tag>2023</tag>
+        <tag>qwb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hug_face_config</title>
+    <url>/2025/05/21/hug-face-config/</url>
+    <content><![CDATA[<span id="more"></span><!--toc-->
+<h1>环境搭建</h1>
+<p>vscode配置python环境，过。</p>
+<p>vscode配置jupyter环境，过。</p>
+<blockquote>
+<p><a href="https://huggingface.co/docs/huggingface_hub/en/guides/cli">https://huggingface.co/docs/huggingface_hub/en/guides/cli</a></p>
+</blockquote>
+<p>安装hugging_face的cli依赖。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pip install huggingface_hub</span><br></pre></td></tr></table></figure>
+<p>安装之后可以使用类似的代码进行简单测试：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> huggingface_hub <span class="keyword">import</span> hf_hub_download</span><br></pre></td></tr></table></figure>
+<p>没报错就表示可以正常调用。</p>
+<h2 id="使用cli调用接口登录">使用cli调用接口登录</h2>
+]]></content>
+      <categories>
+        <category>LLM</category>
+      </categories>
+      <tags>
+        <tag>hugging_face</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI_ML_Study</title>
+    <url>/2025/06/16/AI-ML-Study/</url>
+    <content><![CDATA[<p>AI相关的攻击实现以及复现，需要进行梳理工作。</p>
+<span id="more"></span><!--toc-->
+
+
+
+<h1 id="Trash"><a href="#Trash" class="headerlink" title="Trash"></a>Trash</h1><img src="/2025/06/16/AI-ML-Study/640.png" class="" title="Image">
+
+<h2 id="1-大模型学习本质"><a href="#1-大模型学习本质" class="headerlink" title="1. 大模型学习本质"></a>1. 大模型学习本质</h2><p>大模型学习知识的本质，其实就是把文本转换成的数字，写入大模型的词汇表里，词汇表是个大型的空间矩阵，空间矩阵每个维度（列），就是代表了某个词的一个含义，比如：苹果有水果和手机等多种含义。大模型学习过程就是通过训练，把现实世界的词汇含义，映射到此表空间内。</p>
+<p>大模型学习过程，目前主流：预训练-SFT训练-强化训练三个阶段。</p>
+<p><strong>预训练阶段：这个阶段完成后，模型可实现类似完形填空的效果。</strong></p>
+<p>大量的文本数据：预训练模型通常是在海量的文本数据上进行训练，这些数据涵盖了不同的领域、风格和表达方式。通过这些数据，模型能够接触到丰富的语法结构、句法规则和上下文关联等语言信息。例如，模型可以学习到“猫”和“狗”是常见的动物，甚至能理解它们通常出现在相似的上下文中（如：“猫喜欢吃鱼”与“狗喜欢吃肉”），从而掌握这些动物的基本语义。</p>
+<p><strong>SFT训练：这个阶段是可以实现基本的问答效果</strong></p>
+<p>指令微调的目标就是让模型在面对特定任务时，能够通过给定的指令进行有效的理解和处理。通过“指令微调”，模型不仅能更好地完成像问答、摘要生成、机器翻译等常见任务，还能提高在对话式AI、个性化推荐等应用中的表现。简而言之，SFT是为了让模型在面对具体任务时，能按预期提供更加精准和符合需求的结果。</p>
+<p><strong>强化学习与人类反馈（RLHF）：这个阶段是为了实现回答符合人类偏好</strong></p>
+<p>基于人类反馈的强化学习（Reinforcement Learning from Human Feedback，RLHF）是一种将强化学习与人类反馈结合的方法，旨在优化模型的行为和输出，使其更加符合人类的期望。通过引入人类反馈，RLHF帮助模型更好地理解和满足人类的偏好，生成更自然、更符合人类意图的输出。</p>
+<p>目前训练最难的不是算法，而是数据，高精度数据会显著提升训练效果，数据已经成为大模型的核心竞争力！</p>
+<h2 id="2-学习过程原理"><a href="#2-学习过程原理" class="headerlink" title="2. 学习过程原理"></a>2. 学习过程原理</h2><img src="/2025/06/16/AI-ML-Study/640-1752126095301-6.png" class="" title="Image">
+
+<h2 id="3-过程拆分"><a href="#3-过程拆分" class="headerlink" title="3. 过程拆分"></a>3. 过程拆分</h2><p><strong>a. 数据输入与预处理</strong></p>
+<p>首先要对数据进行预处理，主要是将海量文本拆分为固定长度的短句，再通过分词器和词嵌入技术，将文本转为向量。</p>
+<p><strong>数据集</strong></p>
+<ul>
+<li><p>模型通常在海量的文本数据（如网页、书籍、对话等）上进行训练，数据涵盖多种语言、领域和风格。</p>
+</li>
+<li><p>分词</p>
+<p>文本被分解为词、子词或字符（通过如BPE或WordPiece的分词算法），并转换为数字表示（词嵌入，Embedding）。</p>
+</li>
+<li><p>上下文窗口</p>
+<p>Transformer以固定长度的序列（Context Window）处理输入，序列中的每个词都有对应的嵌入向量。</p>
+</li>
+</ul>
+<p><strong>b. 自注意力机制计算</strong></p>
+<ul>
+<li><p>捕捉关系</p>
+<p>自注意力机制计算序列中每个词与其他词的相关性，生成加权表示。这使模型能理解词与词之间的上下文关系，如“苹果”在不同句子中是水果还是公司。</p>
+</li>
+<li><p>多头机制</p>
+<p>通过多个注意力头并行处理，模型能同时关注不同的语义关系（如语法、语义、逻辑等），从而提取更丰富的特征。</p>
+</li>
+</ul>
+<p><strong>c. 前馈网络与层堆叠</strong></p>
+<ul>
+<li><p>特征转换</p>
+<p>每一层的全连接前馈网络对注意力机制的输出进行非线性变换，进一步提取和整合特征。</p>
+</li>
+<li><p>多层堆叠</p>
+<p>Transformer通常包含数十到数百层，每层处理的信息逐渐抽象，从词级别到句子、段落级别的语义。</p>
+</li>
+</ul>
+<p><strong>d. 反向更新：根据前向和反向传播计算结果，由损失函数计算出差值，反向更新模型参数，使词向量数值逼近现实世界词汇含义。</strong></p>
+<p>Transformer模型通过反向传播算法更新参数，从而“学习”知识。这是深度学习的核心机制，具体步骤如下：</p>
+<p><strong>前向传播</strong></p>
+<ul>
+<li>输入数据（例如分词后的文本序列）经过Transformer的各层（自注意力、前馈网络等），生成输出（如预测下一个词的概率分布）。</li>
+<li>输出与真实标签（Ground Truth）比较，计算损失函数（如交叉熵损失）。</li>
+</ul>
+<p><strong>反向传播</strong></p>
+<p>损失函数对模型参数（如权重矩阵、偏置）的梯度通过链式法则计算。</p>
+<ul>
+<li>从输出层逐层向输入层反向传播，计算每一层参数的梯度。</li>
+<li>例如，自注意力机制的权重、词嵌入矩阵等都会根据梯度更新。</li>
+</ul>
+<p><strong>参数更新</strong></p>
+<p>使用优化算法（如Adam）根据梯度更新模型参数，目标是最小化损失函数。</p>
+<ul>
+<li>更新公式：参数 &#x3D; 参数 - 学习率 * 梯度。</li>
+<li>这一过程反复迭代，使模型逐步逼近数据分布，学习到语言模式和知识。</li>
+</ul>
+<h2 id="4-知识的“存储”：模型参数"><a href="#4-知识的“存储”：模型参数" class="headerlink" title="4. 知识的“存储”：模型参数"></a>4. 知识的“存储”：模型参数</h2><p>大模型知识主要存储在safetensor文件内，文件大小随模型大小增大。</p>
+<p><strong>参数组成：</strong></p>
+<p><strong>Transformer模型包含数十亿到千亿个参数，主要包括：</strong></p>
+<ul>
+<li><p>词嵌入矩阵</p>
+<p>将词或子词映射到高维向量，编码词的语义和语法信息。</p>
+</li>
+<li><p>自注意力层的权重</p>
+<p>包括查询（Query）、键（Key）、值（Value）矩阵，用于捕获词之间的上下文关系。</p>
+</li>
+<li><p>前馈神经网络权重</p>
+<p>处理每一层的特征转换，提取更抽象的模式。</p>
+</li>
+<li><p>偏置和层归一化参数</p>
+<p>用于稳定和调整模型输出</p>
+</li>
+</ul>
+<h1 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h1><h2 id="在线"><a href="#在线" class="headerlink" title="在线"></a>在线</h2><ul>
+<li><a href="https://aistudio.google.com/prompts/new_chat">https://aistudio.google.com/prompts/new_chat</a>    【Google AI Studio】</li>
+<li><a href="https://chromewebstore.google.com/detail/chathub-gpt-4-gemini-clau/iaakpnchhognanibcahlpcplchdfmgma?hl=zh-CN">https://chromewebstore.google.com/detail/chathub-gpt-4-gemini-clau/iaakpnchhognanibcahlpcplchdfmgma?hl=zh-CN</a>    【ChatHub，类似聊多宝，多个大模型调用】</li>
+<li><a href="https://chromewebstore.google.com/detail/simple-chat-hub-%E8%81%8A%E5%A4%9A%E5%AE%9D/dpfkgaedamhcmkkgeiajeggihmfjhhlj?hl=zh-CN">https://chromewebstore.google.com/detail/simple-chat-hub-%E8%81%8A%E5%A4%9A%E5%AE%9D/dpfkgaedamhcmkkgeiajeggihmfjhhlj?hl=zh-CN</a>    【Chrome插件_聊多宝，多个大模型调用】</li>
+</ul>
+<h2 id="离线"><a href="#离线" class="headerlink" title="离线"></a>离线</h2><ul>
+<li><a href="https://github.com/chatboxai/chatbox/releases/tag/v0.10.4">Release v0.10.4 · chatboxai&#x2F;chatbox</a>    【ChatBox】</li>
+<li><a href="https://ollama.com/">Ollama</a>    【Ollama】</li>
+</ul>
+<h2 id="AI辅助编程"><a href="#AI辅助编程" class="headerlink" title="AI辅助编程"></a>AI辅助编程</h2><ul>
+<li><a href="https://www.cursor.com/cn/downloads">https://www.cursor.com/cn/downloads</a>    【Cursor下载】<ul>
+<li><a href="https://github.com/yuaotian/go-cursor-help">yuaotian&#x2F;go-cursor-help: 解决Cursor在免费订阅期间出现以下提示的问题: Your request has been blocked as our system has detected suspicious activity &#x2F; You’ve reached your trial request limit. &#x2F; Too many free trial accounts used on this machine.</a></li>
+</ul>
+</li>
+<li><a href="https://www.trae.com.cn/">https://www.trae.com.cn/</a>    【Trae下载】</li>
+</ul>
+<h3 id="提示词优化"><a href="#提示词优化" class="headerlink" title="提示词优化"></a>提示词优化</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. 设定明确的目标与上下文</span><br><span class="line">2. 激活角色与思维模式</span><br><span class="line">3. 逐步拆解复杂任务</span><br><span class="line">4. 引导深入推理与思考</span><br><span class="line">5. 提供参考资料与外部资源</span><br><span class="line">6. 动态反馈与迭代优化</span><br></pre></td></tr></table></figure>
+
+<h1 id="模型实现过程"><a href="#模型实现过程" class="headerlink" title="模型实现过程"></a>模型实现过程</h1><h2 id="导入库"><a href="#导入库" class="headerlink" title="导入库"></a>导入库</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> TfidfVectorizer</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line"><span class="keyword">import</span> joblib</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>panda</code>库：高效数据处理和分析，主要针对表格型数据（DataFrame），用于加载和操作数据集。</p>
+</li>
+<li><p><code>jiaba</code>库：中文分词结巴库，将中文切分成词语，主要用于中文分词，即文本预处理工作。</p>
+<ul>
+<li><code>jieba.cut(str(word))</code>：针对放入的word进行分词。</li>
+</ul>
+</li>
+<li><p><code>scikit-learn</code>库：通常称为<code>sklearn</code>，提供统一且一致的API接口，进行机器学习</p>
+<ul>
+<li>&#96;&#96;&#96;<h1 id="丰富的机器学习算法"><a href="#丰富的机器学习算法" class="headerlink" title="丰富的机器学习算法"></a>丰富的机器学习算法</h1>分类 (Classification): 支持向量机 (SVM)、逻辑回归、决策树、随机森林、K近邻 (KNN)、朴素贝叶斯、Gradient Boosting (如 GradientBoostingClassifier, HistGradientBoostingClassifier) 等。<br>回归 (Regression): 线性回归、岭回归、Lasso 回归、支持向量回归 (SVR)、决策树回归、随机森林回归等。<br>聚类 (Clustering): K-Means、DBSCAN、Agglomerative Clustering、谱聚类等。<br>降维 (Dimensionality Reduction): 主成分分析 (PCA)、线性判别分析 (LDA)、非负矩阵分解 (NMF) 等。<br>模型选择和评估 (Model Selection &amp; Evaluation): 交叉验证、网格搜索 (Grid Search)、随机搜索 (Random Search)、各种性能指标 (accuracy_score, precision_score, recall_score, f1_score, roc_auc_score 等)。<br>预处理 (Preprocessing): 特征缩放 (StandardScaler, MinMaxScaler)、数据标准化、缺失值处理、类别特征编码 (OneHotEncoder, LabelEncoder)、文本特征提取 (CountVectorizer, TfidfVectorizer) 等。<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">  - `from sklearn.model_selection import train_test_split`：`scikit-learn`库中的函数，用于将数据集划分为训练集和测试集，评估模型泛化能力。</span><br><span class="line"></span><br><span class="line">  - `from sklearn.feature_extraction.text import TfidfVectorizer`：`scikit-learn`库中的函数，用于将文本数据转换为 TF-IDF 特征向量，进行文本特征提取。</span><br><span class="line"></span><br><span class="line">  - `from sklearn.linear_model import LogisticRegression`：`scikit-learn`库中的函数，用于构建和训练逻辑回归分类模型，进行情感分类。</span><br><span class="line"></span><br><span class="line">- `joblib`库：高效地保存以及加载Python对象，特别是模型和向量化器，实现模型持久化。</span><br><span class="line"></span><br><span class="line">  - `joblib.load(&#x27;xxx.pkl&#x27;)`：加载模型以及向量化器，实例化之后可以调用`.transformer()`方法进行向量化。</span><br><span class="line"></span><br><span class="line">## 加载数据集</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line"># 1. 加载数据</span><br><span class="line">df = pd.read_csv(&#x27;数据集.csv&#x27;)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h2 id="文本预处理"><a href="#文本预处理" class="headerlink" title="文本预处理"></a>文本预处理</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 2. 文本预处理 (分词)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">preprocess_text</span>(<span class="params">text</span>):</span><br><span class="line">    words = jieba.cut(<span class="built_in">str</span>(text))</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27; &#x27;</span>.join(words)  <span class="comment"># 返回以空格分隔的字符串</span></span><br><span class="line"></span><br><span class="line">df[<span class="string">&#x27;processed_review&#x27;</span>] = df[<span class="string">&#x27;review&#x27;</span>].apply(preprocess_text)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>words = jieba.cut(str(text))</code><ul>
+<li>使用<code>jieba.cut()</code>方法针对中文进行分词</li>
+<li>INPUT：函数 <code>preprocess_text</code> 接收的文本 <code>&quot;很快，好吃，味道足，量大&quot;</code></li>
+<li>OUTPUT：分词结果，例如一个生成器，迭代产生词语:  <code>[&#39;很快&#39;, &#39;，&#39;, &#39;好吃&#39;, &#39;，&#39;, &#39;味道&#39;, &#39;足&#39;, &#39;，&#39;, &#39;量大&#39;]</code></li>
+</ul>
+</li>
+<li><code>return &#39; &#39;.join(words)</code><ul>
+<li>将分词后的词语用空格连接成一个字符串。</li>
+<li>INPUT：分词结果生成器 <code>[&#39;很快&#39;, &#39;，&#39;, &#39;好吃&#39;, &#39;，&#39;, &#39;味道&#39;, &#39;足&#39;, &#39;，&#39;, &#39;量大&#39;]</code></li>
+<li>OUTPUT：空格连接的字符串: <code>&quot;很快 ， 好吃 ， 味道 足 ， 量大&quot;</code>。 这是 <code>preprocess_text</code> 函数的返回值。</li>
+</ul>
+</li>
+</ul>
+<img src="/2025/06/16/AI-ML-Study/image-20250626194707789.png" class="" title="image-20250626194707789">
+
+<img src="/2025/06/16/AI-ML-Study/image-20250626194722435.png" class="" title="image-20250626194722435">
+
+<h2 id="数据集划分"><a href="#数据集划分" class="headerlink" title="数据集划分"></a>数据集划分</h2><blockquote>
+<p>主要划分为训练集和测试集。</p>
+<p>通常情况下dataset分为训练集、验证集以及测试集。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 3. 数据集划分</span></span><br><span class="line">X_train, X_test, Y_train, Y_test = train_test_split(</span><br><span class="line">    df[<span class="string">&#x27;processed_review&#x27;</span>], df[<span class="string">&#x27;label&#x27;</span>], test_size=<span class="number">0.2</span>, random_state=<span class="number">42</span>, stratify=df[<span class="string">&#x27;label&#x27;</span>]</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="comment"># X_train = df[&#x27;processed_review&#x27;]</span></span><br><span class="line"><span class="comment"># y_train = df[&#x27;label&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>X_train, X_test, Y_train, Y_test = train_test_split(...)</code><ul>
+<li>使用<code>train_test_split()</code>方法，将传入数据分为训练集以及测试集，赋值给四个变量</li>
+<li>INPUT：主要传入数据为<code>DataFrame</code>框架中的<code>processed_review</code>列数据以及<code>label</code>列数据</li>
+<li>OUTPUT：针对这些数据划分为：<code>X_train</code>（特征数据训练集）、<code>X_test</code>（特征数据测试集）、<code>Y_train</code>（标签数据训练集）、<code>Y_test</code>（标签数据测试集）</li>
+</ul>
+</li>
+<li><code>train_test_split(df[&#39;processed_review&#39;], df[&#39;label&#39;], test_size=0.2, random_state=42, stratify=df[&#39;label&#39;])</code><ul>
+<li>调用方法中的具体含义，传入特征数据和标签数据，以及划分参数。</li>
+<li><code>df[&#39;xxx&#39;]</code>训练集以及测试集原始数据来源</li>
+<li><code>test_size</code>：测试集的规模，测试集为原始数据的20%【这种主要采用<strong>留出法</strong>】</li>
+<li><code>random_state</code>：原始数据种子，这边主要设置参数为固定参数，通常情况固定参数为了复现。</li>
+<li><code>stratify = df[&#39;label&#39;]</code>：分层抽样，保证训练集和测试集中不同类别 (label 0 和 1) 的样本比例与原始数据集中相同。</li>
+</ul>
+</li>
+</ul>
+<p><code>X_train</code>：</p>
+<img src="/2025/06/16/AI-ML-Study/image-20250630104028769.png" class="" title="image-20250630104028769">
+
+<p><code>X_test</code>：</p>
+<img src="/2025/06/16/AI-ML-Study/image-20250630104057117.png" class="" title="image-20250630104057117">
+
+<p><code>y_train</code>：</p>
+<img src="/2025/06/16/AI-ML-Study/image-20250630104123343.png" class="" title="image-20250630104123343">
+
+<p><code>y_test</code>：</p>
+<img src="/2025/06/16/AI-ML-Study/image-20250630104144494.png" class="" title="image-20250630104144494">
+
+<h2 id="特征提取——TF-IDF"><a href="#特征提取——TF-IDF" class="headerlink" title="特征提取——TF-IDF"></a>特征提取——TF-IDF</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 4. 特征提取 (TF-IDF)</span></span><br><span class="line">tfidf = TfidfVectorizer(min_df=<span class="number">1</span>, max_features=<span class="literal">None</span>)  <span class="comment"># 适当调整参数</span></span><br><span class="line">X_train_tfidf = tfidf.fit_transform(X_train)</span><br><span class="line"></span><br><span class="line"><span class="comment"># X_test_tfidf = tfidf.transform(X_test)  # 验证时在predict里做,这里注释</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>tfidf = TfidfVectorizer(min_df=1, max_features=None)</code><ul>
+<li>实例化<code>TfidfVevtorizer()</code>，传递的构造参数为<code>min_df</code>，即**最小文档频率 (Minimum Document Frequency)<strong>。 设置为 <code>1</code> 表示词汇必须至少在一个文档中出现才能被包含在词汇表中。这意味着，即使一个词只在语料库中出现一次，也会被考虑；而<code>max_features</code>，即</strong>最大特征数 (Maximum Features)**，设置<code>None</code>，表示不针对特征数数量进行限制，即词汇表将包含所有满足 <code>min_df</code> 条件的词汇。如果设置为<code>max_features = 1000</code>，则表示只会保留 TF-IDF 值最高的 1000 个词汇作为特征。</li>
+<li>实例化后的实例名为<code>tfidf</code>，该对象包含参数配置，可进行特征提取。</li>
+</ul>
+</li>
+<li><code>X_train_tfidf = tfidf.fit_transform(X_train)</code><ul>
+<li>调用实例中的方法<code>fit_transform(X_train)</code>，表示学习<code>X_train</code>训练集中的数据，并且转化成对应的TF-IDF 向量表示，完成了对训练数据的 TF-IDF 特征提取过程。<ul>
+<li><code>fit()</code>：使用输入数据 <code>X_train</code> 来<strong>学习</strong>向量化所需的参数。对于 <code>TfidfVectorizer</code> 来说，这意味着它会扫描 <code>X_train</code> 中的所有文档，构建一个<strong>词汇表</strong>（Vocabulary，即所有不重复的词），并计算每个词的<strong>逆文档频率</strong>（Inverse Document Frequency, IDF）。这个学习过程只发生在 <code>X_train</code> 上，以避免数据泄露（data leakage）。</li>
+<li><code>transform()</code>：将输入数据 <code>X_train</code> 根据刚刚学习到的词汇表和 IDF 参数，<strong>转换</strong>成 TF-IDF 的数值表示形式，通常是一个稀疏矩阵（sparse matrix），每一行代表一个文档，每一列代表一个词的 TF-IDF 值。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="词汇表构造"><a href="#词汇表构造" class="headerlink" title="词汇表构造"></a>词汇表构造</h3><p><strong>步骤</strong>：收集所有文档中的唯一词，按字母序排列。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">X_train = [</span><br><span class="line">    <span class="string">&quot;肉饼 和 合 菜 都 糊 了 ， 不 好吃 ， 粥 很 不错&quot;</span>,</span><br><span class="line">    <span class="string">&quot;菜 也 太 差 了 ， 不想 说 ， 看着 都 没有 食欲&quot;</span>,</span><br><span class="line">    <span class="string">&quot;粥 不怎么样 ， 少不说 味道 也 不 咋 的 ， 卖 的 还 贵 ， 饼 还 可以 ！&quot;</span>,</span><br><span class="line">    <span class="string">&quot;方便 ， 快捷 ， 味道可口 ， 快递 给力&quot;</span>,</span><br><span class="line">    <span class="string">&quot;没有 去 店里 吃 过 不 知道 店里 是不是 也 这么 小 份 ， 19 元 的 炒面 就 只有 一 小碗 的 分量 。 鱼香肉丝 建议 大家 不要 想象 的 和 图片 一样 。&quot;</span>,</span><br><span class="line">    <span class="string">&quot;送 的 什么 豆包 ？ 比 冷 馒头 还 硬 ， 第一次 到 你 宏状元 这样 的 东西 ， 你们 家 菜品质量 太 差 了&quot;</span>,</span><br><span class="line">    <span class="string">&quot;菜 味道 很棒 ！ 送餐 很 及时 ！&quot;</span></span><br><span class="line">    <span class="comment"># ... 更多训练数据</span></span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">voca = [</span><br><span class="line">    <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;一&#x27;</span>, <span class="string">&#x27;一样&#x27;</span>, <span class="string">&#x27;不好吃&#x27;</span>, <span class="string">&#x27;不知道&#x27;</span>, <span class="string">&#x27;图片&#x27;</span>, <span class="string">&#x27;太&#x27;</span>, <span class="string">&#x27;好吃&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;方便&#x27;</span>, <span class="string">&#x27;快递&#x27;</span>, <span class="string">&#x27;快捷&#x27;</span>, <span class="string">&#x27;建议&#x27;</span>, <span class="string">&#x27;小碗&#x27;</span>, <span class="string">&#x27;小份&#x27;</span>, <span class="string">&#x27;差&#x27;</span>, <span class="string">&#x27;店里&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;想象&#x27;</span>, <span class="string">&#x27;分量&#x27;</span>, <span class="string">&#x27;炒面&#x27;</span>, <span class="string">&#x27;粥&#x27;</span>, <span class="string">&#x27;肉饼&#x27;</span>, <span class="string">&#x27;菜&#x27;</span>, <span class="string">&#x27;贵&#x27;</span>, <span class="string">&#x27;送&#x27;</span>, <span class="string">&#x27;送餐&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;还&#x27;</span>, <span class="string">&#x27;都&#x27;</span>, <span class="string">&#x27;分量&#x27;</span>, <span class="string">&#x27;鱼香肉丝&#x27;</span>, <span class="string">&#x27;味道&#x27;</span>, <span class="string">&#x27;味道可口&#x27;</span>, <span class="string">&#x27;及时&#x27;</span>, <span class="string">&#x27;硬&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;给力&#x27;</span>, <span class="string">&#x27;菜品质量&#x27;</span>, <span class="string">&#x27;豆包&#x27;</span>, <span class="string">&#x27;贵&#x27;</span>, <span class="string">&#x27;这样&#x27;</span>, <span class="string">&#x27;宏状元&#x27;</span>, <span class="string">&#x27;冷&#x27;</span>, <span class="string">&#x27;馒头&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;第一次&#x27;</span>, <span class="string">&#x27;及时&#x27;</span>, <span class="string">&#x27;很棒&#x27;</span>, <span class="string">&#x27;不怎么样&#x27;</span>, <span class="string">&#x27;少不说&#x27;</span>, <span class="string">&#x27;咋&#x27;</span>, <span class="string">&#x27;卖&#x27;</span>, <span class="string">&#x27;可以&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;饼&#x27;</span>, <span class="string">&#x27;也&#x27;</span>, <span class="string">&#x27;不想&#x27;</span>, <span class="string">&#x27;说&#x27;</span>, <span class="string">&#x27;看着&#x27;</span>, <span class="string">&#x27;没有&#x27;</span>, <span class="string">&#x27;食欲&#x27;</span>, <span class="string">&#x27;糊&#x27;</span>, <span class="string">&#x27;了&#x27;</span>, <span class="string">&#x27;不&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;合&#x27;</span>, <span class="string">&#x27;和&#x27;</span>, <span class="string">&#x27;很&#x27;</span>, <span class="string">&#x27;不错&#x27;</span>, <span class="string">&#x27;去&#x27;</span>, <span class="string">&#x27;吃&#x27;</span>, <span class="string">&#x27;过&#x27;</span>, <span class="string">&#x27;知道&#x27;</span>, <span class="string">&#x27;是不是&#x27;</span>, <span class="string">&#x27;这么&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;小&#x27;</span>, <span class="string">&#x27;份&#x27;</span>, <span class="string">&#x27;元&#x27;</span>, <span class="string">&#x27;就&#x27;</span>, <span class="string">&#x27;只有&#x27;</span>, <span class="string">&#x27;你们&#x27;</span>, <span class="string">&#x27;家&#x27;</span>, <span class="string">&#x27;东西&#x27;</span>, <span class="string">&#x27;什么&#x27;</span>, <span class="string">&#x27;比&#x27;</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p><em>该部分，共有84个唯一词汇。</em></p>
+<h3 id="TF计算（词频）"><a href="#TF计算（词频）" class="headerlink" title="TF计算（词频）"></a>TF计算（词频）</h3><p>$$<br>TF(t, d) &#x3D; \frac{词t在文档d中出现的次数}{文档d总词数}<br>$$</p>
+<p>示例1：（文档1：<code>&quot;肉饼 和 合 菜 都 糊 了 ， 不 好吃 ， 粥 很 不错&quot;</code>）</p>
+<ul>
+<li>总词数：12（标点不计入）</li>
+<li><code>肉饼</code>的TF值：$\frac{1}{12} \approx 0.0833$</li>
+<li><code>好吃</code>的TF值：$\frac{1}{12} \approx 0.0833$</li>
+</ul>
+<p>示例2：（文档7：<code>&quot;菜 味道 很棒 ！ 送餐 很 及时 ！&quot;</code>）</p>
+<ul>
+<li>总次数：6（标点不计入）</li>
+<li><code>菜</code>的TF值：$\frac{1}{6}\approx 0.1667$</li>
+</ul>
+<h3 id="IDF计算（逆文档频率）"><a href="#IDF计算（逆文档频率）" class="headerlink" title="IDF计算（逆文档频率）"></a>IDF计算（逆文档频率）</h3><p>$$<br>IDF(t) &#x3D; \ln(\frac{N + 1}{n_t + 1}) + 1<br>$$</p>
+<ul>
+<li>$N$表示文档数</li>
+<li>$n_t$表示包含该词语的文档数量，<em>最终进行 +1处理，为了防止0的状态影响权重计算</em></li>
+<li>$\lg$：取对数运算，通常取10为底的对数运算，但不同场景可能采用2为底$\log_2$或者**$e$为底$\ln$**的对数运算</li>
+</ul>
+<p><strong>IDF 的核心作用： 解决常用词干扰，突出稀有词的区分能力</strong></p>
+<p><code>IDF</code> 正是为了解决 <code>TF</code> 的这个局限性而设计的。它的核心思想是：</p>
+<ul>
+<li><strong>常用词普遍出现，区分能力弱：</strong> 如果一个词语在 <strong>很多文档</strong> 中都出现，那么它很可能是个常用词，对于区分文档主题的帮助不大。 <code>IDF</code> 会 <strong>降低</strong> 这类词语的权重。</li>
+<li><strong>稀有词只在少数文档出现，区分能力强：</strong> 如果一个词语只在 <strong>少数文档</strong> 中出现，甚至只在 <strong>一篇文档</strong> 中出现，那么它很可能是一个 <strong>关键词</strong> 或 <strong>专业术语</strong>，能够很好地代表这些文档的主题，并与其他文档区分开来。 <code>IDF</code> 会 <strong>提高</strong> 这类词语的权重。<ul>
+<li><strong>分母：包含该词语的文档数。</strong> 如果一个词语在很多文档中都出现，分母就很大，导致 IDF 值 <strong>降低</strong>。</li>
+<li><strong>分子：文档总数。</strong> 文档总数相对固定，分母越大，整体 IDF 值越小。</li>
+<li><strong>对数 log 和 +1 平滑：</strong> 使用对数是为了缩小 IDF 值的范围，避免极端值，并使分布更平滑。 <code>+1</code> 平滑是为了避免分母为零的情况，并对罕见词语的 IDF 值进行一定的平滑处理。<code>smooth_idf=True</code></li>
+</ul>
+</li>
+</ul>
+<p>提供样例中，存在7个文档，即$N &#x3D; 7$</p>
+<p>示例1：词<code>肉饼</code>  </p>
+<ul>
+<li>仅文档1包含 $\longrightarrow n_t&#x3D;1$  </li>
+<li>$IDF &#x3D; \ln(\frac{7+1}{1+1}) + 1 &#x3D; \ln(4) + 1 \approx 1.3863 + 1 &#x3D; 2.3863$</li>
+</ul>
+<p>示例2：词<code>菜</code></p>
+<ul>
+<li>文档1、2、7包含 $\longrightarrow n_t&#x3D;3$  </li>
+<li>$IDF &#x3D; \ln(\frac{7+1}{3+1}) + 1 &#x3D; \ln(2) + 1 ≈ 0.6931 + 1 &#x3D; 1.693$</li>
+</ul>
+<h3 id="TF-IDF计算"><a href="#TF-IDF计算" class="headerlink" title="TF-IDF计算"></a>TF-IDF计算</h3><p>$$<br>TF-IDF &#x3D; TF(t, d) \times IDF(t)<br>$$</p>
+<p>示例：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&#x27;肉饼&#x27;</span>: <span class="number">0.0833</span> * <span class="number">2.3863</span> ≈ <span class="number">0.1989</span>,</span><br><span class="line">    <span class="string">&#x27;菜&#x27;</span>  : <span class="number">0.0833</span> * <span class="number">1.6931</span> ≈ <span class="number">0.1411</span>,</span><br><span class="line">    <span class="string">&#x27;粥&#x27;</span>  : <span class="number">0.0833</span> * <span class="number">1.6931</span> ≈ <span class="number">0.1411</span>  <span class="comment"># 假设&#x27;粥&#x27;出现在3个文档中</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 文档7的TF-IDF向量（部分）</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="string">&#x27;菜&#x27;</span>  : <span class="number">0.1667</span> * <span class="number">1.6931</span> ≈ <span class="number">0.2822</span>,</span><br><span class="line">    <span class="string">&#x27;送餐&#x27;</span>: <span class="number">0.1667</span> * <span class="number">2.3863</span> ≈ <span class="number">0.3978</span>  <span class="comment"># 假设&#x27;送餐&#x27;仅出现在文档7</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>特征提取相关代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> TfidfVectorizer</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 4. 特征提取 (TF-IDF)</span></span><br><span class="line">tfidf = TfidfVectorizer(min_df=<span class="number">1</span>, max_features=<span class="literal">None</span>)  <span class="comment"># 适当调整参数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据学习后的词汇表，计算对应TF-IDF值</span></span><br><span class="line">X_train_tfidf = tfidf.fit_transform(X_train)</span><br><span class="line"><span class="comment"># X_test_tfidf = tfidf.transform(X_test)  # 验证时在predict里做,这里注释</span></span><br><span class="line"><span class="built_in">print</span>(X_train_tfidf)</span><br><span class="line"><span class="comment"># 注：实际计算后会对向量进行L2归一化</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看学习的词汇表</span></span><br><span class="line">feature_names = tfidf.get_feature_names_out()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;学习到的词汇表 (按索引排序):&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(feature_names)</span><br><span class="line"><span class="comment"># [&#x27;19&#x27; &#x27;一样&#x27; &#x27;不怎么样&#x27; &#x27;不想&#x27; &#x27;不要&#x27; &#x27;不错&#x27; &#x27;东西&#x27; &#x27;什么&#x27; &#x27;你们&#x27; &#x27;分量&#x27; &#x27;及时&#x27; &#x27;只有&#x27; &#x27;可以&#x27; &#x27;味道&#x27;</span></span><br><span class="line"><span class="comment">#  &#x27;味道可口&#x27; &#x27;图片&#x27; &#x27;大家&#x27; &#x27;好吃&#x27; &#x27;宏状元&#x27; &#x27;小碗&#x27; &#x27;少不说&#x27; &#x27;店里&#x27; &#x27;建议&#x27; &#x27;很棒&#x27; &#x27;快捷&#x27; &#x27;快递&#x27; &#x27;想象&#x27; &#x27;方便&#x27;</span></span><br><span class="line"><span class="comment">#  &#x27;是不是&#x27; &#x27;没有&#x27; &#x27;炒面&#x27; &#x27;看着&#x27; &#x27;知道&#x27; &#x27;第一次&#x27; &#x27;给力&#x27; &#x27;肉饼&#x27; &#x27;菜品质量&#x27; &#x27;豆包&#x27; &#x27;这么&#x27; &#x27;这样&#x27; &#x27;送餐&#x27; &#x27;食欲&#x27;</span></span><br><span class="line"><span class="comment">#  &#x27;馒头&#x27; &#x27;鱼香肉丝&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 5. 模型训练</span></span><br><span class="line"><span class="comment"># lr_model = LogisticRegression(C=1e10, max_iter=20000,verbose=2) # 适当调整参数</span></span><br><span class="line">lr_model = LogisticRegression(C=<span class="number">1</span>, max_iter=<span class="number">20000</span>,verbose=<span class="number">1</span>)</span><br><span class="line">lr_model.fit(X_train_tfidf, y_train)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>lr_model = LogisticRegression(C=1, max_iter=20000, verbose=1)</code><ul>
+<li>实例化<code>LogisticRegression</code>，同时设置相关模型参数。<ul>
+<li><code>C = 1</code>：正则化强度参数（正则化参数的倒数），<code>C</code>值越小，正则化强度越大，防止模型过拟合。设置参数<code>1</code>，属于中等强度的正则化。较大的<code>C</code>值，容易过拟合数据；较小的<code>C</code>值，容易欠拟合数据。</li>
+<li><code>max_iter = 20000</code>：最大迭代次数，限制模型训练时迭代优化的最大次数，防止训练时间过长。将 <code>max_iter</code> 设置得较大，是为了确保求解器有足够的机会运行直到收敛。</li>
+<li><code>verbose = 1</code>：控制训练过程中的信息输出。设置1会输出部分训练过程信息，有助于监控训练进度，0为不输出，设置更高的值会输出更详细的信息。</li>
+</ul>
+</li>
+<li><code>lr_model.fit(X_train_tfidf, y_train)</code><ul>
+<li>调用<code>fit</code>方法训练逻辑回归模型。模型会根据输入的训练数据<code>X_train_tfidf</code>（特征矩阵）和<code>y_train</code>（标签）学习数据中的模式，调整模型内部的参数（权重&#x2F;系数 coefficient 和 截距 intercept），最小化预测值与真实值之间的差值。这个过程就是模型训练的核心。</li>
+<li><code>X_train_tfidf</code>（训练集特征数据）：TF-IDF 特征矩阵，通常是稀疏矩阵。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">X_train_tfidf = [</span><br><span class="line">    [0.1989, 0, 0, ..., 0.1411, 0.1411, ...]  # 文档1的TF-IDF向量</span><br><span class="line">    [0, 0.2822, 0, ..., 0, 0, ...]          # 文档2的TF-IDF向量</span><br><span class="line">    [..., ..., ..., ..., ..., ..., ...]</span><br><span class="line">    [0, 0, 0, ..., 0.3978, 0, ...]          # 文档n的TF-IDF向量</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>每一行代表一个训练样本（评论），每一列代表一个特征（词语），矩阵中的数值是该词语在对应评论中的 <code>TF-IDF</code> 值。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">y_train = [0, 1, 0, 1, 0, ..., 1]  # 对应 X_train_tfidf 中每条评论的情感标签 (0 或 1)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>y_train</code>：数据集划分的训练集标签数据。<code>y_train</code>通常是<code>Series</code>或者<code>NumPy</code>数组。</li>
+</ul>
+<h3 id="初始化参数"><a href="#初始化参数" class="headerlink" title="初始化参数"></a>初始化参数</h3><p>逻辑回归模型在开始训练时，会初始化模型的系数以及截距参数，通常是随机初始化或者零初始化。</p>
+<h3 id="计算预测概率"><a href="#计算预测概率" class="headerlink" title="计算预测概率"></a>计算预测概率</h3><p>对于训练集中的每一个样本 <code>X_train_tfidf[i]</code>，模型会使用当前的参数计算预测为<code>正例 (label=1)</code> 的概率。</p>
+<p>假设我们简化模型，只考虑两个特征 “好吃” 和 “味道” 的 TF-IDF 值，以及一个样本的特征向量为  </p>
+<p>  ${x}<em>i &#x3D; [x</em>{i,好吃}&#x3D;0.2, x_{i,味道}&#x3D;0.3]$。</p>
+<p>假设模型当前的权重为 :<br>$$<br>w&#x3D;[w_{好吃} &#x3D; 0.8，w_{味道}&#x3D;0.5]<br>$$<br>偏置项 $b &#x3D; -0.1$。</p>
+<p>则线性组合 $z$ 的计算如下：<br>$$<br>z &#x3D; (0.8 \times 0.2) + (0.5 \times 0.3) + (-0.1) \ &#x3D; 0.16 + 0.15 - 0.1 \ &#x3D; 0.21<br>$$<br>将计算得到的 $z &#x3D; 0.2$  代入 Sigmoid 函数：<br>$$<br>p_i &#x3D; \frac{1}{1 + e^{-0.21}} \approx \frac{1}{1 + 0.8106} &#x3D;  \frac{1}{1.8106} \approx 0.552<br>$$<br>这意味着模型预测该样本为正例 (<code>label = 1</code>) 的概率约为 $0.5523$。</p>
+<h3 id="计算损失（损失函数）"><a href="#计算损失（损失函数）" class="headerlink" title="计算损失（损失函数）"></a>计算损失（损失函数）</h3><p>假设该样本的真实标签 $$y_i &#x3D; $$ (正例)，预测概率 $p_i \approx 0.5523$。 则该样本的对数损失为：<br>$$<br>L &#x3D; -[1 \times \ln(0.5523) + (1 - 1) \times \ln(1-0.5523)]\<br>\approx -\ln(0.5523)\<br>&#x3D; -(-0.5945)\<br>&#x3D; 0.5945<br>$$</p>
+<h3 id="梯度下降优化"><a href="#梯度下降优化" class="headerlink" title="梯度下降优化"></a>梯度下降优化</h3><p>多次重复2-4，进行多次迭代，使用<code>max_iter</code> 参数控制，每次迭代使用全部或者部分训练数据（取决于梯度下降的具体实现，如批量梯度下降、随机梯度下降等）。</p>
+<p>随着迭代次数的增加，模型参数逐渐收敛到最优值，损失函数逐渐减小。</p>
+<p>在前一个步骤中，我们计算了一个样本的损失值约为 $L \approx 0.5945$，使用的模型参数为：</p>
+<ul>
+<li>权重： $w &#x3D; [w_{好吃}&#x3D;0.8, w_{味道}&#x3D;0.5]$</li>
+<li>偏置：$b &#x3D; -0.1$</li>
+</ul>
+<p>现在，我们假设在当前的迭代中，通过反向传播等方法，我们计算得到损失函数对于这些参数的梯度（这只是 <strong>假设的梯度值</strong>，实际梯度计算会更复杂）：</p>
+<ul>
+<li>损失函数对 $w_{好吃}$ 的梯度：$\frac{\partial{L}}{\partial{w_{好吃}}} &#x3D; 0.25$</li>
+<li>损失函数对 $w_{味道}$ 的梯度：$\frac{\partial{L}}{\partial{w_{味道}}} &#x3D; -0.15$</li>
+<li>损失函数对 $b$ 的梯度：$\frac{\partial{L}}{\partial{b}} &#x3D; 0.05$</li>
+</ul>
+<p>我们选择一个 <strong>学习率</strong> (learning rate) <code>α = 0.1</code> 来控制参数更新的步长。</p>
+<p>根据梯度下降的更新规则，我们根据公式：<br>$$<br>w &#x3D; w - \alpha\frac{\partial{L}}{\partial{w}}\<br>b &#x3D; b - \alpha\frac{\partial{L}}{\partial{b}}<br>$$<br>更新权重和偏置：</p>
+<ol>
+<li><strong>更新</strong> $w_{好吃}$<strong>:</strong></li>
+</ol>
+<p>$$w_{好吃}^{new} &#x3D; w_{好吃}^{old} - α * (∂L&#x2F;∂w_{好吃})             &#x3D; 0.8 - 0.1 * 0.25             &#x3D; 0.8 - 0.025             &#x3D; 0.775$$</p>
+<ol>
+<li><strong>更新</strong> $w_{味道}$：</li>
+</ol>
+<p>$$w_{味道}^{new} &#x3D; w_{味道}^{old} - α * (∂L&#x2F;∂w_{味道})             &#x3D; 0.5 - 0.1 * (-0.15)             &#x3D; 0.5 + 0.015             &#x3D; 0.515$$</p>
+<ol>
+<li><strong>更新</strong> $b$<strong>:</strong></li>
+</ol>
+<p>$$b^{new} &#x3D; b^{old} - α * (∂L&#x2F;∂b)       &#x3D; -0.1 - 0.1 * 0.05       &#x3D; -0.1 - 0.005       &#x3D; -0.105$$</p>
+<p><strong>更新后的模型参数:</strong></p>
+<p>经过一次梯度下降迭代，模型参数更新为：</p>
+<ul>
+<li>新的权重: $$w^{new} &#x3D; [w_{好吃}&#x3D;0.775, w_{味道}&#x3D;0.515$$</li>
+<li>新的偏置: $$b^{new} &#x3D; -0.10$$</li>
+</ul>
+<p><strong>预期效果:</strong></p>
+<p>在下一次迭代中，使用更新后的参数 $w^{new}$ 和 $b^{new}$ 重新计算预测概率和损失时，<strong>损失值</strong> <strong><code>L</code></strong> <strong>预期会比之前的</strong> <strong><code>0.5945</code></strong> <strong>要小</strong>。 梯度下降的目标就是通过迭代更新参数，逐步减小损失函数的值，最终找到一组最优的参数。</p>
+<p><strong>注意:</strong></p>
+<ul>
+<li><strong>学习率</strong> <strong><code>α</code></strong> <strong>的选择至关重要。</strong> 如果学习率过大，可能导致参数更新步长过大，损失函数震荡甚至发散；如果学习率过小，参数更新步长过小，收敛速度会很慢。</li>
+<li><strong>实际的梯度计算远比这里假设的要复杂</strong>，它需要根据损失函数和模型结构，利用微积分中的链式法则进行反向传播计算。</li>
+</ul>
+<h3 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h3><p>代码中 <code>LogisticRegression(C=1, ...)</code>  使用了 L2 正则化（默认行为）。</p>
+<p>在步骤 3 中，我们计算了 <strong>未正则化的损失值</strong> <code>L ≈ 0.5945</code>。 现在，我们考虑 <strong>L2 正则化</strong>，并使用代码中 <code>LogisticRegression(C=1, ...)</code> 的参数 <code>C=1</code>。</p>
+<p><strong>L2 正则化项计算:</strong></p>
+<p>L2 正则化项的公式是：<br>$$<br>L2_{正则化} &#x3D; \frac{1}{2C}||w||^{2}<em>2<br>$$<br>其中 $$||w||^2_2 &#x3D; w</em>{好吃}^2 + w_{味道}^2$$ 是权重向量的 L2 范数的平方。 </p>
+<p>使用 <strong>原始的权重</strong> $$w &#x3D; [w_{好吃}&#x3D;0.8, w_{味道}&#x3D;0.5$$ 和 $$C&#x3D;$$，计算正则化项：<br>$$<br>&#x3D; \frac{1}{2C}(w_{好吃}^{2} + w_{味道}^{2})\<br>&#x3D; \frac{1}{2\times 1} (0.8^{2} + 0.5^{2})\<br>&#x3D; 0.5\times (0.64 + 0.25) &#x3D; 0.445<br>$$<br><strong>带有 L2 正则化的总损失 (目标函数):</strong></p>
+<p>带有 L2 正则化的总损失函数 <code>J</code> 等于 <strong>原始损失</strong> <strong><code>L</code></strong> <strong>加上 L2 正则化项</strong>：<br>$$<br>J &#x3D; L + L2_regularization_term \ \approx 0.5945 + 0.445 \ &#x3D; 1.0395<br>$$<br><strong>对比:</strong></p>
+<ul>
+<li><strong>未正则化的损失</strong> <strong><code>L</code></strong> <strong>≈ 0.5945</strong></li>
+<li><strong>带有 L2 正则化的总损失</strong> <strong><code>J</code></strong> <strong>≈ 1.0395</strong></li>
+</ul>
+<p><strong>观察:</strong></p>
+<ul>
+<li>添加 L2 正则化项后，总损失值从 <code>0.5945</code> 增加到 <code>1.0395</code>。 <strong>正则化项会惩罚模型权重，使得总损失函数的值增大</strong>。</li>
+<li><strong>正则化的目的是防止过拟合，提高模型的泛化能力，而不是直接减小训练集上的损失。</strong> 牺牲一部分训练集上的性能，来换取在未知数据上更好的表现。</li>
+</ul>
+<p><strong>C 值的影响:</strong></p>
+<p>如果我们将 <code>C</code> 值 <strong>减小</strong>，例如设置为 <code>C = 0.1</code>，则正则化强度会 <strong>增大</strong>。 我们重新计算 L2 正则化项：<br>$$<br>L2_regularization_term , (C &#x3D; 0.1) &#x3D; \frac{1}{2 \times 0.1} \left( w_{\text{好吃}}^2 + w_{\text{味道}}^2 \right) \ &#x3D; 5 \left( 0.64 + 0.25 \right) \ &#x3D; 5 \times 0.89 \ &#x3D; 4.45<br>$$</p>
+<p>此时，带有 L2 正则化的总损失变为：<br>$$<br>J , (C &#x3D; 0.1) &#x3D; L + L2_regularization_term , (C &#x3D; 0.1) \ \approx 0.5945 + 4.45 \ &#x3D; 5.0445<br>$$<br><strong>结论:</strong></p>
+<ul>
+<li>当 <code>C</code> 值从 <code>1</code> 减小到 <code>0.1</code> 时，L2 正则化项从 <code>0.445</code> 增加到 <code>4.45</code>，总损失值也显著增加。</li>
+<li><strong><code>C</code></strong> <strong>值越小，正则化强度越大，对权重的惩罚越大，模型参数会倾向于更小的值，从而降低模型的复杂度，防止过拟合。</strong></li>
+</ul>
+<h3 id="最终输出"><a href="#最终输出" class="headerlink" title="最终输出"></a>最终输出</h3><p><code>lr_model</code> -  训练完成的 <code>LogisticRegression</code> 模型对象 。  </p>
+<p>模型内部的权重 $w$ 和 偏置 $b$ 已经被优化调整，能够用于对新的文本数据进行情感分类预测。  </p>
+<p>训练过程中的 <code>verbose=1</code> 设置可能会在控制台输出迭代过程的信息 (例如，迭代次数、损失值等)。</p>
+<h2 id="模型保存"><a href="#模型保存" class="headerlink" title="模型保存"></a>模型保存</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 6. 模型保存</span></span><br><span class="line">joblib.dump(lr_model, <span class="string">&#x27;sentiment_model.pkl&#x27;</span>)</span><br><span class="line">joblib.dump(tfidf, <span class="string">&#x27;tfidf_vectorizer.pkl&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>joblib.dump(lr_model, &#39;sentiment_model.pkl&#39;)</code><ul>
+<li>使用<code>joblib.dump()</code>方法将训练好的逻辑回归模型<code>lr_model</code>保存为<code>sentiment_model.pkl</code></li>
+<li><code>lr_model</code>为<code>LogisticRegression</code>的实例对象，包含模型学到的所有参数 （权重<code>coefficients</code>以及截距<code>intercept</code>），以及模型的结构信息。</li>
+<li><code>.pkl</code>：为常用的文件扩展名，表示<code>Python</code>的<code>pickle</code>文件格式，用于序列化<code>Python</code>对象</li>
+</ul>
+</li>
+<li>内部逻辑<ul>
+<li>序列化<code>Serialization</code>，实例对象序列化。</li>
+<li>写入指定文件。</li>
+</ul>
+</li>
+<li><code>joblib.dump(tfidf, &#39;tfidf_vectorizer.pkl&#39;)</code><ul>
+<li>使用<code>joblib.dump()</code>方法将训练好的TF-IDF向量化器<code>tfidf</code>保存为<code>tfidf_vectorizer.pkl</code></li>
+<li><code>tfidf</code>为<code>TfidfVectorizer</code>的实例对象，包含了从训练数据中学到的词汇表 （vocabulary）、IDF 值等信息，用于将文本数据转换为 TF-IDF 特征向量。</li>
+</ul>
+</li>
+<li>内部逻辑<ul>
+<li>针对<code>tfidf</code>进行序列化</li>
+<li>写入指定文件中</li>
+</ul>
+</li>
+<li>后续使用模型进行预测的时候，需要加载向量化器，用其将新的文本数据转换为与训练数据相同格式的TF-IDF特征向量。</li>
+</ul>
+<h1 id="数理知识"><a href="#数理知识" class="headerlink" title="数理知识"></a>数理知识</h1><h2 id="线性模型"><a href="#线性模型" class="headerlink" title="线性模型"></a>线性模型</h2><p>给定由$d$个属性描述的示例$x &#x3D; (x_1;x_2;\cdots;x_d)$，其中$x_i$是$x$在第$i$个属性上的取值，线性模型试图学得一个通过属性的线性组合进行预测的函数，即：<br>$$<br>f(x) &#x3D; w_1x_1 + w_2x_2 + \cdots + w_dx_d + b<br>$$<br>上式用向量形式写成：<br>$$<br>f(x) &#x3D; w^{T}x + b<br>$$<br>非线性模型可以在线性模型的基础上通过引入层次结构或者高维映射而得。</p>
+<ul>
+<li>$x_i &#x3D; [x_1,x_2,x_3,\cdots,x_n]$是第$i$个样本的特征向量。</li>
+<li>$w &#x3D; [w_1,w_2,w_3,\cdots,w_n]$是第$i$个特征的权重。</li>
+<li>$b$是模型的偏置项&#x2F;截距</li>
+</ul>
+<h2 id="均方误差"><a href="#均方误差" class="headerlink" title="均方误差"></a>均方误差</h2><p>为了确定$w$以及$b$，可使用均方误差进行回归任务衡量，即使得均方误差最小化：<br>$$<br>(w^{<em>}, b^{</em>}) &#x3D; {\arg \min}<em>{w,b}\Sigma</em>{i &#x3D; 1}^{m}(f(x_i) - y_i)^{2}\<br>&#x3D; {\arg \min}<em>{w,b}\Sigma</em>{i &#x3D; 1}^{m}(y_i - wx_i - b)^{2}<br>$$<br>最优解的闭式解：<br>$$<br>w &#x3D; \frac{\Sigma_{i&#x3D;1}^{m}y_i(x_i - \bar{x})}{\Sigma_{i&#x3D;1}^{m}x_i^{2} - \frac{1}{m}(\Sigma_{i&#x3D;1}^{m}x_i)^{2}}\<br>b &#x3D; \frac{1}{m}\Sigma(y_i - wx_i)<br>$$<br>$\bar{x} &#x3D; \frac{1}{m}\Sigma_{i&#x3D;1}^{m}x_i$为$x$的均值。</p>
+<h2 id="Sigmoid函数"><a href="#Sigmoid函数" class="headerlink" title="Sigmoid函数"></a>Sigmoid函数</h2><p>$$<br>p_i &#x3D; \sigma(z) &#x3D; \frac{1}{1 + e^{-z}}<br>$$</p>
+<p>本质：将线性组合 $z$ 转换成概率 $p_i$ ，将任意实数值压缩到 $0-1$ 之间。</p>
+<ul>
+<li>进行概率映射</li>
+</ul>
+<p>$$<br>z &#x3D; w_0 + w_1x_1 + \cdots + w_nx_n &#x3D; x^{T}x + b<br>$$</p>
+<p>$z$可以任意取实值，但是对于分类问题，需要模型的输出是样本属于某个类别的<strong>概率</strong>。概率的取值范围是 [0, 1]。</p>
+<ul>
+<li>建立决策边界</li>
+<li>梯度下降优化</li>
+</ul>
+<h2 id="对数损失函数或交叉熵损失"><a href="#对数损失函数或交叉熵损失" class="headerlink" title="对数损失函数或交叉熵损失"></a>对数损失函数或交叉熵损失</h2><blockquote>
+<p>分类问题，考虑二分类任务，其输出标记$y \in {0, 1}$</p>
+</blockquote>
+<p>模型需要评估预测概率 $p_i$ 与真实标签 $y_i$ 之间的差距。逻辑回归通常使用 <strong>对数损失函数或交叉熵损失 (Log Loss &#x2F; Cross-Entropy Loss)</strong> 来衡量这种差距。 对于二分类问题，对数损失函数的公式如下：<br>$$<br>L(y_i, p_i) &#x3D; -[y_i\ln(p_i) + (1-y_i\ln(1-p_i)]<br>$$</p>
+<ul>
+<li>如果真实标签 $y_i &#x3D; 1$ （正例），损失函数变为 $L &#x3D; -\ln(p_i)$，预测概率 $p_i$ 越接近 $1$ ，损失越小；如果 $p_i$ 越接近 $0$，损失越大。</li>
+<li>如果真实标签 $y_i &#x3D; 0$ （负例），损失函数变为 $L &#x3D; -\ln(1- p_i)$，预测概率 $p_i$ 越接近 $0$ ，损失越小；如果 $p_i$ 越接近 $1$，损失越大。</li>
+</ul>
+<h2 id="优化算法"><a href="#优化算法" class="headerlink" title="优化算法"></a>优化算法</h2><blockquote>
+<p>分类中，采用梯度下降优化算法进行优化，用于迭代更新模型参数。</p>
+</blockquote>
+<p>主要目标是找到最优的权重 $w$ 以及偏置 $b$，使得所有训练样本的平均损失最小化。</p>
+<p>梯度下降是一种常用的优化算法，用于迭代地更新模型参数，使其朝着损失函数梯度下降的方向移动，从而逐步减小损失函数的值。</p>
+<ul>
+<li><strong>计算梯度:</strong>  梯度是指损失函数在当前参数值下，沿着每个参数方向的变化率。  梯度向量指明了损失函数下降最快的方向。</li>
+<li><strong>参数更新:</strong>  根据计算得到的梯度，按照一定的学习率 (learning rate)，更新模型参数：</li>
+</ul>
+<p>$$<br>w &#x3D; w - \alpha\frac{\partial{L}}{\partial{w}}\<br>b &#x3D; b - \alpha\frac{\partial{L}}{\partial{b}}<br>$$</p>
+<ul>
+<li>$\alpha$ 是学习率，控制参数更新的步长。</li>
+<li>$\frac{\partial{L}}{\partial{w}}$ 与 $\frac{\partial{L}}{\partial{b}}$ 分别是损失函数对权重和偏置的梯度。</li>
+</ul>
+<h2 id="正则化-1"><a href="#正则化-1" class="headerlink" title="正则化"></a>正则化</h2><blockquote>
+<p>L1 以及 L2正则化</p>
+</blockquote>
+<p>L2正则化，引入与权重向量 $w$  的平方范数成正比的项，来约束模型权重的大小，防止权重过大，从而提高模型的泛化能力。<br>$$<br>J(w, b) &#x3D; L_{原始损失} + L2_{正则化} &#x3D; \frac{1}{N}\sum_{i&#x3D;1}^{N}L(y_i, p_i) + \frac{1}{2C} ||w||^{2}_{2}<br>$$</p>
+<ul>
+<li>$N$ 为训练样本数量</li>
+<li>$C$ 为正则化强度，一般值越小，正则化强度越大</li>
+</ul>
+<h1 id="数据采集以及数据处理"><a href="#数据采集以及数据处理" class="headerlink" title="数据采集以及数据处理"></a>数据采集以及数据处理</h1><h2 id="爬虫爬取数据"><a href="#爬虫爬取数据" class="headerlink" title="爬虫爬取数据"></a>爬虫爬取数据</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">需要编写的脚本为python，将</span><br><span class="line">目标的url为：http://43.142.149.166:12306/?page=3</span><br><span class="line">编写一份爬虫脚本，其中需要提取的内容为username，用户ID，评论文本。当前的URL翻页是通过GET请求中的page进行控制的，需要爬取所有的内容，最终保存为一个csv文件，user_id，username，review</span><br><span class="line">1. 明确目标以及上下文：需要编写的脚本为python，将</span><br><span class="line">目标的url为：http://43.142.149.166:12306/?page=3</span><br><span class="line">编写一份爬虫脚本，其中需要提取的内容为username，用户ID，评论文本。</span><br><span class="line">2. 逐步拆解复杂任务：当前的URL翻页是通过GET请求中的page进行控制的，需要爬取所有的内容，最终保存为一个csv文件，user_id，username，review</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;zh-CN&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">    &lt;title&gt;品味外卖 - 用户真实评论&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;</span><br><span class="line">    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="数据标注与完整性校验"><a href="#数据标注与完整性校验" class="headerlink" title="数据标注与完整性校验"></a>数据标注与完整性校验</h1><img src="/2025/06/16/AI-ML-Study/image-20250626144634775.png" class="" title="image-20250626144634775">
+
+<h2 id="采集数据"><a href="#采集数据" class="headerlink" title="采集数据"></a>采集数据</h2><p>主要涉及爬虫爬取数据。如上所示。</p>
+<img src="/2025/06/16/AI-ML-Study/image-20250626140430559.png" class="" title="image-20250626140430559">
+
+<p>爬取结果如图所示。</p>
+<h2 id="调用大模型进行情感标注"><a href="#调用大模型进行情感标注" class="headerlink" title="调用大模型进行情感标注"></a>调用大模型进行情感标注</h2><h3 id="在线大模型API调用"><a href="#在线大模型API调用" class="headerlink" title="在线大模型API调用"></a>在线大模型API调用</h3><p>通常情况下，提示词需要进行优化，需要让其只返回0，1数据，不输出其他任何额外数据。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 采用火山引擎进行在线大模型情感标注</span></span><br><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># # 从环境变量获取API密钥</span></span><br><span class="line">ARK_API_KEY = os.environ.get(<span class="string">&quot;ARK_API_KEY&quot;</span>, <span class="string">&quot;YOUR_ARK_API_KEY_PLACEHOLDER&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">analyze_sentiment</span>(<span class="params">review_text</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    使用ARK API分析评论的情感</span></span><br><span class="line"><span class="string">    返回0表示负面情感，1表示正面情感</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    url = <span class="string">&quot;https://ark.cn-beijing.volces.com/api/v3/chat/completions&quot;</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span>,</span><br><span class="line">        <span class="string">&quot;Authorization&quot;</span>: <span class="string">f&quot;Bearer <span class="subst">&#123;ARK_API_KEY&#125;</span>&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 构建API请求</span></span><br><span class="line">    payload = &#123;</span><br><span class="line">        <span class="string">&quot;model&quot;</span>: <span class="string">&quot;deepseek-v3-250324&quot;</span>,</span><br><span class="line">        <span class="string">&quot;messages&quot;</span>: [</span><br><span class="line">            &#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;system&quot;</span>, <span class="string">&quot;content&quot;</span>: <span class="string">&quot;情感分析你是情感分析助手。对以下评论进行，只回复数字：1表示正面评价，0表示负面评价。&quot;</span>&#125;,</span><br><span class="line">            &#123;<span class="string">&quot;role&quot;</span>: <span class="string">&quot;user&quot;</span>, <span class="string">&quot;content&quot;</span>: review_text&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.post(url, headers=headers, json=payload)</span><br><span class="line">        response.raise_for_status()  <span class="comment"># 检查是否有HTTP错误</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 解析响应</span></span><br><span class="line">        result = response.json()</span><br><span class="line">        content = result[<span class="string">&quot;choices&quot;</span>][<span class="number">0</span>][<span class="string">&quot;message&quot;</span>][<span class="string">&quot;content&quot;</span>].strip()</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 从内容中提取情感标签（0或1）</span></span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;1&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> <span class="string">&quot;0&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;无法解析情感，API返回: <span class="subst">&#123;content&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;API请求出错: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="comment"># 检查API密钥是否设置</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> ARK_API_KEY:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;错误: 未设置ARK_API_KEY环境变量&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    input_file = <span class="string">&quot;reviews.csv&quot;</span></span><br><span class="line">    output_file = <span class="string">&quot;reviews_with_sentiment_0617test.csv&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 读取CSV文件</span></span><br><span class="line">        df = pd.read_csv(input_file)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 检查必要的列是否存在</span></span><br><span class="line">        required_columns = [<span class="string">&quot;user_id&quot;</span>, <span class="string">&quot;username&quot;</span>, <span class="string">&quot;review&quot;</span>]</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">all</span>(col <span class="keyword">in</span> df.columns <span class="keyword">for</span> col <span class="keyword">in</span> required_columns):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;错误: CSV文件必须包含以下列: <span class="subst">&#123;<span class="string">&#x27;, &#x27;</span>.join(required_columns)&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 添加标签列</span></span><br><span class="line">        df[<span class="string">&quot;label&quot;</span>] = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 处理每一行评论</span></span><br><span class="line">        <span class="keyword">for</span> index, row <span class="keyword">in</span> df.iterrows():</span><br><span class="line">            review = row[<span class="string">&quot;review&quot;</span>]</span><br><span class="line">            user_id = row[<span class="string">&quot;user_id&quot;</span>]</span><br><span class="line">            username = row[<span class="string">&quot;username&quot;</span>]</span><br><span class="line"></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;\n处理评论 <span class="subst">&#123;index + <span class="number">1</span>&#125;</span>/<span class="subst">&#123;<span class="built_in">len</span>(df)&#125;</span>:&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;用户ID: <span class="subst">&#123;user_id&#125;</span>, 用户名: <span class="subst">&#123;username&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;评论内容: <span class="subst">&#123;review&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 调用API进行情感分析</span></span><br><span class="line">            sentiment = analyze_sentiment(review)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 更新DataFrame</span></span><br><span class="line">            df.at[index, <span class="string">&quot;label&quot;</span>] = sentiment</span><br><span class="line"></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;情感标注结果: <span class="subst">&#123;sentiment&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 避免API请求过快</span></span><br><span class="line">            time.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 保存结果到新的CSV文件</span></span><br><span class="line">        df.to_csv(output_file, index=<span class="literal">False</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n分析完成，结果已保存到 <span class="subst">&#123;output_file&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;处理出错: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<h3 id="离线大模型API调用"><a href="#离线大模型API调用" class="headerlink" title="离线大模型API调用"></a>离线大模型API调用</h3><blockquote>
+<p>采用ollama进行模型调用，个人环境采用了gemma2:9b大模型</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> csv</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 从环境变量获取API密钥</span></span><br><span class="line"><span class="comment"># 不再需要ARK API密钥，使用本地Ollama服务器</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">analyze_sentiment</span>(<span class="params">review_text</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    使用本地Ollama API分析评论的情感</span></span><br><span class="line"><span class="string">    返回0表示负面情感，1表示正面情感</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    url = <span class="string">&quot;http://localhost:11434/api/generate&quot;</span></span><br><span class="line">    headers = &#123;</span><br><span class="line">        <span class="string">&quot;Content-Type&quot;</span>: <span class="string">&quot;application/json&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment"># 构建API请求</span></span><br><span class="line">    payload = &#123;</span><br><span class="line">        <span class="string">&quot;model&quot;</span>: <span class="string">&quot;gemma2:9b&quot;</span>,</span><br><span class="line">        <span class="string">&quot;prompt&quot;</span>: <span class="string">f&quot;情感分析任务。对以下评论进行分析，只回复数字：1表示正面评价，0表示负面评价。评论内容：<span class="subst">&#123;review_text&#125;</span>&quot;</span>,</span><br><span class="line">        <span class="string">&quot;stream&quot;</span>: <span class="literal">False</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        response = requests.post(url, headers=headers, json=payload)</span><br><span class="line">        response.raise_for_status()  <span class="comment"># 检查是否有HTTP错误</span></span><br><span class="line">        <span class="comment"># 解析响应</span></span><br><span class="line">        result = response.json()</span><br><span class="line">        content = result[<span class="string">&quot;response&quot;</span>].strip()</span><br><span class="line">        <span class="comment"># 从内容中提取情感标签（0或1）</span></span><br><span class="line">        <span class="keyword">if</span> <span class="string">&quot;1&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> <span class="string">&quot;0&quot;</span> <span class="keyword">in</span> content:</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;无法解析情感，API返回: <span class="subst">&#123;content&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;API请求出错: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    input_file = <span class="string">&quot;reviews.csv&quot;</span></span><br><span class="line">    output_file = <span class="string">&quot;reviews_with_sentiment_local.csv&quot;</span></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="comment"># 读取CSV文件</span></span><br><span class="line">        df = pd.read_csv(input_file)</span><br><span class="line">        <span class="comment"># 检查必要的列是否存在</span></span><br><span class="line">        required_columns = [<span class="string">&quot;user_id&quot;</span>, <span class="string">&quot;username&quot;</span>, <span class="string">&quot;review&quot;</span>]</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">all</span>(col <span class="keyword">in</span> df.columns <span class="keyword">for</span> col <span class="keyword">in</span> required_columns):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;错误: CSV文件必须包含以下列: <span class="subst">&#123;<span class="string">&#x27;, &#x27;</span>.join(required_columns)&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        <span class="comment"># 添加标签列</span></span><br><span class="line">        df[<span class="string">&quot;label&quot;</span>] = <span class="literal">None</span></span><br><span class="line">        <span class="comment"># 处理每一行评论</span></span><br><span class="line">        <span class="keyword">for</span> index, row <span class="keyword">in</span> df.iterrows():</span><br><span class="line">            review = row[<span class="string">&quot;review&quot;</span>]</span><br><span class="line">            user_id = row[<span class="string">&quot;user_id&quot;</span>]</span><br><span class="line">            username = row[<span class="string">&quot;username&quot;</span>]</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;\n处理评论 <span class="subst">&#123;index + <span class="number">1</span>&#125;</span>/<span class="subst">&#123;<span class="built_in">len</span>(df)&#125;</span>:&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;用户ID: <span class="subst">&#123;user_id&#125;</span>, 用户名: <span class="subst">&#123;username&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;评论内容: <span class="subst">&#123;review&#125;</span>&quot;</span>)</span><br><span class="line"> </span><br><span class="line">            <span class="comment"># 调用API进行情感分析</span></span><br><span class="line">            sentiment = analyze_sentiment(review)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 更新DataFrame</span></span><br><span class="line">            df.at[index, <span class="string">&quot;label&quot;</span>] = sentiment</span><br><span class="line"></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;情感标注结果: <span class="subst">&#123;sentiment&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">            <span class="comment"># 避免API请求过快</span></span><br><span class="line">            time.sleep(<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 保存结果到新的CSV文件</span></span><br><span class="line">        df.to_csv(output_file, index=<span class="literal">False</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;\n分析完成，结果已保存到 <span class="subst">&#123;output_file&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;处理出错: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<p>进行情感标注如图所示。</p>
+<img src="/2025/06/16/AI-ML-Study/image-20250626140734799.png" class="" title="image-20250626140734799">
+
+<h2 id="严格按要求提交数据"><a href="#严格按要求提交数据" class="headerlink" title="严格按要求提交数据"></a>严格按要求提交数据</h2><ul>
+<li>提交要求如下：</li>
+</ul>
+<img src="/2025/06/16/AI-ML-Study/image-20250626141352646.png" class="" title="image-20250626141352646">
+
+<img src="/2025/06/16/AI-ML-Study/image-20250626140948069.png" class="" title="image-20250626140948069">
+
+<p>即：提交utf-8格式的csv文件，csv格式为：<code>user_id,label,signature</code>。</p>
+<p>提示词示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">帮我编写一段python脚本，要求是传入reviews_with_sentiment.csv,传入的数据集列名为: user_id,username,review,label</span><br><span class="line">将user_id与username拼接进行批量MD5加密，如：user_id为11146，username为6CkB8tEG，得到的数据应为MD5(111466CkB8tEG)，新生成一列为signature的列，最后保存为reviews_submit.csv文件，该文件需要包含user_id,label,signature，保存文件以utf-8进行编码保存。</span><br></pre></td></tr></table></figure>
+
+<p>优化后的提示词：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">目标与上下文: 我正在处理一个评论数据集，需要对用户的身份信息进行脱敏处理，以便后续分析。请帮我生成一个Python脚本，实现对数据集中的用户ID和用户名进行MD5加密生成唯一标识，并将处理后的数据导出。</span><br><span class="line"></span><br><span class="line">激活角色与思维模式: 请你扮演一位熟练的数据处理工程师，具备使用Python和pandas处理CSV文件的丰富经验。你需要仔细分析我的需求，并编写一个高效、健壮且易于理解的脚本。</span><br><span class="line"></span><br><span class="line">逐步拆解复杂任务: 具体来说，脚本需要完成以下几个步骤：</span><br><span class="line">1. 读取数据: 读取名为 reviews_with_sentiment.csv 的CSV文件。请注意，该文件包含 user_id, username, review, label 四列。</span><br><span class="line">2. 生成签名: 对于数据集的每一行，将 user_id 和 username 的值拼接成一个字符串，然后对该字符串进行MD5哈希计算。例如，如果 user_id 是 &#x27;11146&#x27; 且 username 是 &#x27;6CkB8tEG&#x27;，则计算 MD5(&#x27;111466CkB8tEG&#x27;) 的值。</span><br><span class="line">3. 添加新列: 将计算得到的MD5哈希值作为新的一列，命名为 signature，添加到原始数据中。</span><br><span class="line">4. 选择并导出数据: 仅保留 user_id, label, 和新生成的 signature 三列。</span><br><span class="line">5. 保存文件: 将筛选后的数据保存到一个新的CSV文件，命名为 reviews_submit.csv。请确保保存文件时使用 UTF-8 编码，以避免潜在的字符编码问题。</span><br><span class="line"></span><br><span class="line">引导深入推理与思考: 在编写脚本时，请考虑以下几点：</span><br><span class="line">* 如何使用pandas高效地对每一行进行处理？</span><br><span class="line">* MD5哈希需要字节作为输入，如何在拼接字符串后正确进行编码？</span><br><span class="line">* 如何确保输出的CSV文件是以UTF-8编码保存的？</span><br><span class="line">* 是否需要添加一些基本的错误处理，例如文件不存在或列名不匹配的情况？</span><br></pre></td></tr></table></figure>
+
+<p>示例代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate_signature</span>(<span class="params">user_id, username</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    将 user_id 和 username 拼接成字符串，并生成 MD5 签名。</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    string_to_hash = <span class="built_in">str</span>(user_id) + <span class="built_in">str</span>(username)  <span class="comment"># 确保是字符串</span></span><br><span class="line">    md5_hash = hashlib.md5(string_to_hash.encode(<span class="string">&#x27;utf-8&#x27;</span>)).hexdigest()</span><br><span class="line">    <span class="keyword">return</span> md5_hash</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    input_file = <span class="string">&quot;reviews_with_sentiment.csv&quot;</span></span><br><span class="line">    output_file = <span class="string">&quot;reviews_submit.csv&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        df = pd.read_csv(input_file)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 检查必要的列是否存在</span></span><br><span class="line">        required_columns = [<span class="string">&quot;user_id&quot;</span>, <span class="string">&quot;username&quot;</span>, <span class="string">&quot;review&quot;</span>, <span class="string">&quot;label&quot;</span>]</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">all</span>(col <span class="keyword">in</span> df.columns <span class="keyword">for</span> col <span class="keyword">in</span> required_columns):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&quot;错误: CSV文件必须包含以下列: <span class="subst">&#123;<span class="string">&#x27;, &#x27;</span>.join(required_columns)&#125;</span>&quot;</span>)</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 创建新的 &#x27;signature&#x27; 列</span></span><br><span class="line">        df[<span class="string">&#x27;signature&#x27;</span>] = df.apply(<span class="keyword">lambda</span> row: generate_signature(row[<span class="string">&#x27;user_id&#x27;</span>], row[<span class="string">&#x27;username&#x27;</span>]), axis=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 选择要保留的列</span></span><br><span class="line">        df_output = df[[<span class="string">&quot;user_id&quot;</span>, <span class="string">&quot;label&quot;</span>, <span class="string">&quot;signature&quot;</span>]]</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 保存结果到新的 CSV 文件</span></span><br><span class="line">        df_output.to_csv(output_file, index=<span class="literal">False</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;签名已生成并保存到 <span class="subst">&#123;output_file&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span> FileNotFoundError:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;错误: 文件 <span class="subst">&#123;input_file&#125;</span> 未找到.&quot;</span>)</span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;处理出错: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+
+<img src="/2025/06/16/AI-ML-Study/image-20250626144146787.png" class="" title="image-20250626144146787">
+
+<h1 id="对抗样本"><a href="#对抗样本" class="headerlink" title="对抗样本"></a>对抗样本</h1><img src="/2025/06/16/AI-ML-Study/image-20250626144719295.png" class="" title="image-20250626144719295">
+
+<img src="/2025/06/16/AI-ML-Study/image-20250626144857026.png" class="" title="image-20250626144857026">
+
+<h2 id="梳理逻辑"><a href="#梳理逻辑" class="headerlink" title="梳理逻辑"></a>梳理逻辑</h2><ul>
+<li>加载模型以及向量化器</li>
+<li>基于单一样本进行分词</li>
+<li>基于向量化器进行分词的向量化</li>
+<li>针对</li>
+</ul>
+<h1 id="模型权重窃取攻击"><a href="#模型权重窃取攻击" class="headerlink" title="模型权重窃取攻击"></a>模型权重窃取攻击</h1><h2 id="已知信息"><a href="#已知信息" class="headerlink" title="已知信息"></a>已知信息</h2><img src="/2025/06/16/AI-ML-Study/image-20250616131526221.png" class="" title="image-20250616131526221">
+
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2>]]></content>
+      <categories>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>2025</tag>
+        <tag>work</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LLM_Fine_tuning</title>
+    <url>/2025/07/21/LLM-Fine-tuning/</url>
+    <content><![CDATA[<span id="more"></span><!--toc-->
+]]></content>
   </entry>
 </search>
