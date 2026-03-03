@@ -2815,3 +2815,243 @@ mjx-container[display='true'] + br {
     padding: 10px 12px;
   }
 }
+/* =========================================================
+   The Sea & Chaos - Gemini 星系毛玻璃重构计划 
+   ========================================================= */
+/* 1. 抽真空：清除底层多余的实体背景，让背景的连线特效露出来 */
+.main,
+.container,
+.content-wrap {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+/* 2. 核心星云容器：针对 Gemini 左右两侧独立的卡片进行玻璃化 */
+/* 目标：左侧文章块、右侧头像区、右侧目录区、底部分页、评论区 */
+.post-block,
+.header-inner,
+.sidebar-inner,
+.pagination,
+.comments {
+/* 默认（日间）状态：浅色白矮星材质 */
+  background: rgba(255,255,255,0.4) !important;
+  backdrop-filter: blur(15px) !important; /* 星云景深 */
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255,255,255,0.4) !important; /* 明显的星光边缘 */
+  border-radius: 16px !important; /* 更圆润的行星轮廓 */
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.1) !important;
+  padding: 20px !important; /* 增加内部呼吸感 */
+  margin-bottom: 24px !important; /* 推开星系间距 */
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+}
+/* 3. 暗物质模式（夜间模式）的独立参数 */
+/* 当切换到深色模式时，变成暗星云材质 */
+@media (prefers-color-scheme: dark) {
+  .post-block,
+  .header-inner,
+  .sidebar-inner,
+  .pagination,
+  .comments {
+    background: rgba(30,32,40,0.55) !important; /* 深空半透明 */
+    border: 1px solid rgba(255,255,255,0.08) !important;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5) !important; /* 更深的黑洞阴影 */
+  }
+}
+/* 兼容手动切换暗色主题 */
+html[data-theme='dark'] .post-block,
+html[data-theme='dark'] .header-inner,
+html[data-theme='dark'] .sidebar-inner,
+html[data-theme='dark'] .pagination,
+html[data-theme='dark'] .comments {
+  background: rgba(30,32,40,0.55) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5) !important;
+}
+/* 4. 反重力悬停：解决“单调”感，让页面活起来 */
+.post-block:hover,
+.header-inner:hover,
+.sidebar-inner:hover {
+  transform: translateY(-5px) scale(1.01); /* 向上跃迁并微放大 */
+/* 悬停时周围散发恒星光晕 */
+  box-shadow: 0 15px 45px 0 rgba(0,0,0,0.4), 0 0 25px 0 rgba(100,200,255,0.15) !important;
+  border-color: rgba(255,255,255,0.2) !important;
+}
+/* 5. 标题超新星发光：让主要文字更吸引眼球 */
+.post-title-link {
+  transition: all 0.3s;
+}
+.post-title-link:hover {
+  color: #88c0d0 !important; /* 极光蓝 */
+  text-shadow: 0 0 10px rgba(136,192,208,0.8); /* 字体发光 */
+}
+/* 6. 阅读更多按钮：脉冲星引擎 */
+.btn {
+  background: transparent !important;
+  border: 2px solid rgba(255,255,255,0.2) !important;
+  border-radius: 8px !important;
+  transition: all 0.3s !important;
+}
+.btn:hover {
+  background: rgba(255,255,255,0.1) !important;
+  border-color: #fff !important;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3) !important;
+}
+/* 7. 修正右侧边栏内部元素的背景色（防止其遮挡毛玻璃） */
+.site-brand-container,
+.site-author,
+.links-of-author {
+  background: transparent !important;
+}
+/* =========================================================
+   Gemini 天文扩展包 - 光谱与遥测 
+   ========================================================= */
+/* 1. 恒星光谱标题：打破白天模式的纯灰死板 */
+.post-title-link {
+/* 默认（白天）：深邃的大气层蓝到星际青色渐变 */
+  background-image: linear-gradient(90deg, #1a2980 0%, #26d0ce 100%);
+  -webkit-background-clip: text;
+  color: transparent !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+/* 标题鼠标悬浮：太阳耀斑爆发（橙红色高光） */
+.post-title-link:hover {
+  background-image: linear-gradient(90deg, #ff4e50 0%, #f9d423 100%);
+  text-shadow: 0 0 20px rgba(255,78,80,0.4);
+}
+/* 暗物质模式下的标题调整（防止夜间看不清） */
+@media (prefers-color-scheme: dark) {
+  .post-title-link {
+    background-image: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%); /* 夜间白矮星冷光 */
+  }
+  .post-title-link:hover {
+    background-image: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%); /* 夜间极光 */
+  }
+}
+html[data-theme='dark'] .post-title-link {
+  background-image: linear-gradient(90deg, #e0eafc 0%, #cfdef3 100%);
+}
+html[data-theme='dark'] .post-title-link:hover {
+  background-image: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+}
+/* =========================================================
+   Gemini 天文扩展包 - 修正星际消光（正文对比度重构）
+   ========================================================= */
+/* 1. 全局正文字体颜色定义 */
+:root {
+  --text-color: #2c3e50 !important; /* 白天：深渊灰蓝 */
+}
+/* 拦截暗黑模式切换信号，注入高光亮度 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #e2e8f0 !important; /* 夜间：天狼星般明亮的银白 */
+  }
+}
+html[data-theme='dark'] {
+  --text-color: #e2e8f0 !important;
+}
+/* 2. 强制穿透 NexT 的底层标签束缚（解决红框内字看不清的问题） */
+.post-body,
+.post-body p,
+.post-body span,
+.post-body div {
+  color: var(--text-color) !important;
+  line-height: 1.8 !important; /* 增加星际膨胀的呼吸感 */
+  letter-spacing: 0.5px !important; /* 让字符之间的引力稍微拉开 */
+  transition: color 0.3s ease;
+}
+/* 3. 特殊行内元素（如高亮、代码块、行内标签）的自适应修正 */
+/* 避免在暗黑模式下，行内标签像是一块黑胶布 */
+.post-body code,
+.post-body mark {
+  background: rgba(38,208,206,0.1) !important; /* 统一使用极光青色的微弱光晕 */
+  color: #26d0ce !important; /* 极光青文字 */
+  border-radius: 4px !important;
+  padding: 2px 6px !important;
+  text-shadow: none !important;
+}
+html[data-theme='dark'] .post-body code,
+html[data-theme='dark'] .post-body mark {
+  background: rgba(255,255,255,0.1) !important; /* 暗黑模式下的白矮星微光 */
+  color: #88c0d0 !important; /* 冰川蓝发光 */
+}
+/* 4. 阅读更多按钮边距微调，推开与正文的距离 */
+.post-button {
+  margin-top: 30px !important;
+}
+/* 3. 伴星轨道锁定（侧边栏当前激活菜单的优化） */
+.menu-item-active a {
+  background: rgba(38,208,206,0.1) !important; /* 极光青色的微光背景 */
+  border-right: 3px solid #26d0ce !important; /* 右侧轨道指示灯 */
+  color: #26d0ce !important; /* 文字高亮 */
+  border-radius: 8px !important;
+  box-shadow: inset -5px 0 15px -10px #26d0ce !important; /* 内部引力发光 */
+}
+/* 去除原本默认的小圆点（如果你觉得默认的圆点太普通的话可以加上这句） */
+.menu-item-active a::after {
+  display: none !important;
+}
+/* =========================================================
+   Gemini 天文扩展包 - 遥测数据 (Post Meta) 终极光谱修正
+   ========================================================= */
+/* 1. 基础遥测字体设定：保持机读代码的极客感 */
+.post-meta {
+  font-family: 'Courier New', Courier, 'Consolas', monospace !important;
+  font-size: 0.85em !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/* ================= 白天模式：清爽的高级灰 + 极光青 ================= */
+/* 基础文字与分割线：使用清爽的“航天钛灰”，告别脏脏的深蓝，完美融入浅灰背景 */
+.post-meta,
+.post-meta-item-text,
+.post-meta time,
+.post-meta span {
+  color: #5c7080 !important;
+}
+/* 图标 (日历/文件夹) 和 分类链接：极光青，提供清晰的点击暗示 */
+.post-meta a,
+.post-meta i {
+  color: #26d0ce !important;
+  border-bottom-color: rgba(38,208,206,0.4) !important;
+  transition: all 0.3s ease;
+}
+/* 鼠标悬停：太阳耀斑橙 */
+.post-meta a:hover {
+  color: #ff4e50 !important;
+  border-bottom-color: #ff4e50 !important;
+}
+/* ================= 暗黑模式：明亮星光白 + 极光蓝 (兼容 Darkmode.js) ================= */
+/* 拦截插件的暗黑信号！将文字强制点亮为“天狼星白” */
+.darkmode--activated .post-meta,
+.darkmode--activated .post-meta-item-text,
+.darkmode--activated .post-meta time,
+.darkmode--activated .post-meta span {
+  color: #e2e8f0 !important;
+}
+/* 图标和分类链接：夜空中的高亮极光蓝 */
+.darkmode--activated .post-meta a,
+.darkmode--activated .post-meta i {
+  color: #00c9ff !important;
+  border-bottom-color: rgba(0,201,255,0.4) !important;
+}
+/* 夜间鼠标悬停：跃迁极光绿 */
+.darkmode--activated .post-meta a:hover {
+  color: #92fe9d !important;
+  border-bottom-color: #92fe9d !important;
+}
+/* 6. 脉冲星引擎按钮（优化 Read More） */
+.post-button .btn {
+  color: #26d0ce !important;
+  border: 1px solid rgba(38,208,206,0.5) !important;
+  background: rgba(38,208,206,0.05) !important;
+  border-radius: 20px !important;
+  padding: 6px 20px !important;
+  font-family: 'Courier New', monospace; /* 按钮也用极客字体 */
+}
+.post-button .btn:hover {
+  background: #26d0ce !important;
+  color: #fff !important;
+  box-shadow: 0 0 20px rgba(38,208,206,0.6) !important; /* 脉冲星爆闪 */
+  transform: scale(1.05);
+}

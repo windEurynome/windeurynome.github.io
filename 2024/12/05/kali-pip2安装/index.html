@@ -28,7 +28,7 @@
 <meta property="og:description" content="kali-2024版本，pip2安装。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-12-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-05T07:14:58.343Z">
+<meta property="article:modified_time" content="2024-12-05T07:14:58.000Z">
 <meta property="article:author" content="Eurynome">
 <meta property="article:tag" content="kali2024">
 <meta property="article:tag" content="pip2">
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1. 安装setup-tools18.5</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2.  安装pip2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">3. 测试pip2</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85setup-tools18-5"><span class="nav-number">1.</span> <span class="nav-text">1. 安装setup-tools18.5</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85pip2"><span class="nav-number">2.</span> <span class="nav-text">2.  安装pip2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E6%B5%8B%E8%AF%95pip2"><span class="nav-number">3.</span> <span class="nav-text">3. 测试pip2</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -276,20 +276,23 @@
     <div class="post-body" itemprop="articleBody">
         <p><code>kali-2024</code>版本，pip2安装。</p>
 <span id="more"></span><!--toc-->
-<h1>1. 安装setup-tools18.5</h1>
-<p>下载文件</p>
+
+<h1 id="1-安装setup-tools18-5"><a href="#1-安装setup-tools18-5" class="headerlink" title="1. 安装setup-tools18.5"></a>1. 安装setup-tools18.5</h1><p>下载文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://pypi.python.org/packages/source/s/setuptools/setuptools-18.5.tar.gz </span><br><span class="line"><span class="comment"># 建议直接本地机下载东西然后传进去</span></span><br></pre></td></tr></table></figure>
+
 <p>然后进行解压缩</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf setuptools-18.5.tar.gz  </span><br><span class="line"><span class="built_in">cd</span> setuptools-18.5/</span><br><span class="line"><span class="comment"># 最好在非管理员权限之下进行下载</span></span><br></pre></td></tr></table></figure>
+
 <p>root权限之下安装相关依赖</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo python2 setup.py build</span><br><span class="line">sudo python2 setup.py install</span><br></pre></td></tr></table></figure>
-<h1>2.  安装pip2</h1>
-<p><a target="_blank" rel="noopener" href="http://xn--2-zb2b494k.xn--7pip-bl7j.py">安装2.7的pip.py</a></p>
+
+<h1 id="2-安装pip2"><a href="#2-安装pip2" class="headerlink" title="2.  安装pip2"></a>2.  安装pip2</h1><p>安装2.7的pip.py</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://bootstrap.pypa.io/pip/2.7/get-pip.py</span><br><span class="line"><span class="comment"># 建议直接本地机下载东西然后传进去</span></span><br></pre></td></tr></table></figure>
+
 <p>直接运行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo python2 get-pip.py</span><br></pre></td></tr></table></figure>
-<h1>3. 测试pip2</h1>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip2 --version</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-测试pip2"><a href="#3-测试pip2" class="headerlink" title="3. 测试pip2"></a>3. 测试pip2</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip2 --version</span><br></pre></td></tr></table></figure>
     </div>
     <!-- end of the post-->
     <div>

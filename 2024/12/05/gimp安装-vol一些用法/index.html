@@ -28,7 +28,7 @@
 <meta property="og:description" content="主要是一些kali中工具的安装，这些工具安装适用于Kali-2024版本。 中间有一个题目复现，主要涉及画图需要用gimp的场景。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-12-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-05T07:08:14.220Z">
+<meta property="article:modified_time" content="2024-12-05T07:08:14.000Z">
 <meta property="article:author" content="Eurynome">
 <meta property="article:tag" content="basecrack">
 <meta property="article:tag" content="gimp">
@@ -148,7 +148,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">安装gimp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85flatpak"><span class="nav-number">1.1.</span> <span class="nav-text">安装flatpak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cflatpak"><span class="nav-number">1.2.</span> <span class="nav-text">运行flatpak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0flatpak"><span class="nav-number">1.3.</span> <span class="nav-text">更新flatpak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5"><span class="nav-number">1.4.</span> <span class="nav-text">docker启动失败</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">安装ciphey</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">安装pwntools</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">4.</span> <span class="nav-text">安装basecrack</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text">镜像文件简单分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.1.</span> <span class="nav-text">了解镜像文件使用系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#netscan"><span class="nav-number">5.1.1.</span> <span class="nav-text">netscan</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPC%E6%BC%8F%E6%B4%9E%E6%8E%A7%E5%88%B6%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">5.2.</span> <span class="nav-text">IPC漏洞控制服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3%E4%B8%80%E8%88%AC%E8%80%83%E8%99%91%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="nav-number">5.3.</span> <span class="nav-text">账号相关一般考虑注册表相关信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hivelist"><span class="nav-number">5.3.1.</span> <span class="nav-text">hivelist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hivedump"><span class="nav-number">5.3.2.</span> <span class="nav-text">hivedump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#printkey"><span class="nav-number">5.3.3.</span> <span class="nav-text">printkey</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hashdump"><span class="nav-number">5.3.4.</span> <span class="nav-text">hashdump</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3%E4%B8%BB%E8%A6%81%E8%80%83%E8%99%91%E5%88%A9%E7%94%A8%E5%8F%AF%E7%96%91%E8%BF%9B%E7%A8%8B%E6%8A%8A%E6%95%B0%E6%8D%AEdump%E4%B8%8B%E6%9D%A5"><span class="nav-number">5.4.</span> <span class="nav-text">文件相关主要考虑利用可疑进程把数据dump下来</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pstree-pslist"><span class="nav-number">5.4.1.</span> <span class="nav-text">pstree&#x2F;pslist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#memdump"><span class="nav-number">5.4.2.</span> <span class="nav-text">memdump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#editbox"><span class="nav-number">5.4.3.</span> <span class="nav-text">editbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filescan"><span class="nav-number">5.4.4.</span> <span class="nav-text">filescan</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dumpfile"><span class="nav-number">5.4.5.</span> <span class="nav-text">dumpfile</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85gimp"><span class="nav-number">1.</span> <span class="nav-text">安装gimp</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85flatpak"><span class="nav-number">1.1.</span> <span class="nav-text">安装flatpak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cflatpak"><span class="nav-number">1.2.</span> <span class="nav-text">运行flatpak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0flatpak"><span class="nav-number">1.3.</span> <span class="nav-text">更新flatpak</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#docker%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5"><span class="nav-number">1.4.</span> <span class="nav-text">docker启动失败</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85ciphey"><span class="nav-number">2.</span> <span class="nav-text">安装ciphey</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85pwntools"><span class="nav-number">3.</span> <span class="nav-text">安装pwntools</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%85basecrack"><span class="nav-number">4.</span> <span class="nav-text">安装basecrack</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6%E7%AE%80%E5%8D%95%E5%88%86%E6%9E%90"><span class="nav-number">5.</span> <span class="nav-text">镜像文件简单分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F"><span class="nav-number">5.1.</span> <span class="nav-text">了解镜像文件使用系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#netscan"><span class="nav-number">5.1.1.</span> <span class="nav-text">netscan</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPC%E6%BC%8F%E6%B4%9E%E6%8E%A7%E5%88%B6%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">5.2.</span> <span class="nav-text">IPC漏洞控制服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B4%A6%E5%8F%B7%E7%9B%B8%E5%85%B3%E4%B8%80%E8%88%AC%E8%80%83%E8%99%91%E6%B3%A8%E5%86%8C%E8%A1%A8%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="nav-number">5.3.</span> <span class="nav-text">账号相关一般考虑注册表相关信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hivelist"><span class="nav-number">5.3.1.</span> <span class="nav-text">hivelist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hivedump"><span class="nav-number">5.3.2.</span> <span class="nav-text">hivedump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#printkey"><span class="nav-number">5.3.3.</span> <span class="nav-text">printkey</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hashdump"><span class="nav-number">5.3.4.</span> <span class="nav-text">hashdump</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%9B%B8%E5%85%B3%E4%B8%BB%E8%A6%81%E8%80%83%E8%99%91%E5%88%A9%E7%94%A8%E5%8F%AF%E7%96%91%E8%BF%9B%E7%A8%8B%E6%8A%8A%E6%95%B0%E6%8D%AEdump%E4%B8%8B%E6%9D%A5"><span class="nav-number">5.4.</span> <span class="nav-text">文件相关主要考虑利用可疑进程把数据dump下来</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pstree-pslist"><span class="nav-number">5.4.1.</span> <span class="nav-text">pstree&#x2F;pslist</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#memdump"><span class="nav-number">5.4.2.</span> <span class="nav-text">memdump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#editbox"><span class="nav-number">5.4.3.</span> <span class="nav-text">editbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filescan"><span class="nav-number">5.4.4.</span> <span class="nav-text">filescan</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dumpfile"><span class="nav-number">5.4.5.</span> <span class="nav-text">dumpfile</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -280,208 +280,159 @@
         <p>主要是一些kali中工具的安装，这些工具安装适用于<code>Kali-2024</code>版本。</p>
 <p>中间有一个题目复现，主要涉及画图需要用<code>gimp</code>的场景。</p>
 <span id="more"></span><!--toc-->
-<h1>安装gimp</h1>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.gimp.org/">GIMP - GNU Image Manipulation Program</a><br>
-<a target="_blank" rel="noopener" href="https://www.gimp.org/downloads/">GIMP - Downloads</a></p>
+
+<h1 id="安装gimp"><a href="#安装gimp" class="headerlink" title="安装gimp"></a>安装gimp</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.gimp.org/">GIMP - GNU Image Manipulation Program</a><br><a target="_blank" rel="noopener" href="https://www.gimp.org/downloads/">GIMP - Downloads</a></p>
 </blockquote>
 <p><em>还得是官方，比较可靠。</em></p>
-<h2 id="安装flatpak">安装flatpak</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref</span><br></pre></td></tr></table></figure>
-<p>直接先进行安装，可能需要稳定网络。<br>
-反正多试试，比docker拉取容易。<br>
-安装<code>gimp</code>相关的环境，一般需要比较多的时间进行安装。<br>
-一共是5/7个环境，需要花费一定时间，可能安装失败。</p>
-<h2 id="运行flatpak">运行flatpak</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flatpak run org.gimp.GIMP//stable</span><br></pre></td></tr></table></figure>
-<p>安装失败，直接重新安装即可。<br>
-打开原始文件的2种方式。</p>
+<h2 id="安装flatpak"><a href="#安装flatpak" class="headerlink" title="安装flatpak"></a>安装flatpak</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flatpak install https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref</span><br></pre></td></tr></table></figure>
+
+<p>直接先进行安装，可能需要稳定网络。<br>反正多试试，比docker拉取容易。<br>安装<code>gimp</code>相关的环境，一般需要比较多的时间进行安装。<br>一共是5&#x2F;7个环境，需要花费一定时间，可能安装失败。</p>
+<h2 id="运行flatpak"><a href="#运行flatpak" class="headerlink" title="运行flatpak"></a>运行flatpak</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flatpak run org.gimp.GIMP//stable</span><br></pre></td></tr></table></figure>
+
+<p>安装失败，直接重新安装即可。<br>打开原始文件的2种方式。</p>
 <ul>
 <li>使用上面的命令之后，在图形化界面中打开<code>data</code>文件</li>
 <li>或者直接使用<code>flatpak run org.gimp.GIMP//stable xxx.data</code></li>
 </ul>
-<h2 id="更新flatpak">更新flatpak</h2>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure>
+<h2 id="更新flatpak"><a href="#更新flatpak" class="headerlink" title="更新flatpak"></a>更新flatpak</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flatpak update</span><br></pre></td></tr></table></figure>
+
 <p>还失败的话就更新下<code>flatpak</code>。</p>
-<h2 id="docker启动失败">docker启动失败</h2>
-<blockquote>
+<h2 id="docker启动失败"><a href="#docker启动失败" class="headerlink" title="docker启动失败"></a>docker启动失败</h2><blockquote>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_39779233/article/details/142890967">Docker 拉取镜像时配置可用镜像源（包含国内可用镜像源）_docker镜像源-CSDN博客</a></p>
 </blockquote>
 <p>类似如下报错：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status docker.service</span><br></pre></td></tr></table></figure>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">× docker.service - Docker Application Container Engine</span><br><span class="line">     Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; preset: enabled)</span><br><span class="line">     Active: failed (Result: exit-code) since Mon 2024-11-11 01:26:48 EST; 4s ago</span><br><span class="line"> Invocation: a94a14824532421fa127a297e3857f2e</span><br><span class="line">TriggeredBy: × docker.socket</span><br><span class="line">       Docs: https://docs.docker.com</span><br><span class="line">    Process: 21309 ExecStart=/usr/sbin/dockerd -H fd:// --containerd=/run/containerd/c&gt;</span><br><span class="line">   Main PID: 21309 (code=exited, status=1/FAILURE)</span><br><span class="line"></span><br><span class="line">Nov 11 01:26:48 kali systemd[1]: docker.service: Scheduled restart job, restart counte&gt;</span><br><span class="line">Nov 11 01:26:48 kali systemd[1]: docker.service: Start request repeated too quickly.</span><br><span class="line">Nov 11 01:26:48 kali systemd[1]: docker.service: Failed with result &#x27;exit-code&#x27;.</span><br><span class="line">Nov 11 01:26:48 kali systemd[1]: Failed to start docker.service - Docker Application C&gt;</span><br></pre></td></tr></table></figure>
-<p>报错关键：<code>Result: exit-code</code><br>
-主要由于一些配置文件错误导致报错了。</p>
+
+<p>报错关键：<code>Result: exit-code</code><br>主要由于一些配置文件错误导致报错了。</p>
 <p>一般就直接针对配置文件进行处理：<code>vi /etc/docker/daemon.json</code></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;registry-mirrors&quot;: [</span><br><span class="line">        &quot;https://docker.1panel.live&quot;,</span><br><span class="line">        &quot;https://hub.rat.dev&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p>修改完毕之后，直接使用<code>systemctl daemon-reload</code>，进行reload.</p>
 <p>然后重启docker服务。<code>systemctl restart docker</code></p>
-<p>最后查看是否换源成功。<br>
-<code>docker info</code></p>
-<h1>安装ciphey</h1>
-<blockquote>
-<p>主要存在的困难点就是镜像源被ban掉了所以导致无法下载。<br>
-要么换镜像，要么就是直接挂代理，害。</p>
+<p>最后查看是否换源成功。<br><code>docker info</code></p>
+<h1 id="安装ciphey"><a href="#安装ciphey" class="headerlink" title="安装ciphey"></a>安装ciphey</h1><blockquote>
+<p>主要存在的困难点就是镜像源被ban掉了所以导致无法下载。<br>要么换镜像，要么就是直接挂代理，害。</p>
 </blockquote>
 <p>在上面的换源操作成功之后，突然可以安装<code>ciphey</code>了，神奇。</p>
-<p><code>docker run -it --rm remnux/ciphey</code><br>
-没有镜像的话，会自动索引可以下载的镜像源，然后进行安装。<br>
-安装完毕之后，就可以直接进行调用了。</p>
+<p><code>docker run -it --rm remnux/ciphey</code><br>没有镜像的话，会自动索引可以下载的镜像源，然后进行安装。<br>安装完毕之后，就可以直接进行调用了。</p>
 <p>一般调用：</p>
 <ul>
 <li><code>docker run -it --rm remnux/ciphey -t &quot;xxx&quot;</code></li>
 <li><code>docker run -it --rm remnux/ciphey -f [filename]</code></li>
 </ul>
-<h1>安装pwntools</h1>
-<blockquote>
+<h1 id="安装pwntools"><a href="#安装pwntools" class="headerlink" title="安装pwntools"></a>安装pwntools</h1><blockquote>
 <p><a target="_blank" rel="noopener" href="https://docs.pwntools.com/en/stable/install.html#python3">https://docs.pwntools.com/en/stable/install.html#python3</a></p>
 </blockquote>
-<p>包含python3的pwntools的安装。<br>
-涉及到<a href="kali-pip3%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.md">kali-pip3安装虚拟环境</a>中提升权限的问题。<br>
-一般安装不上东西基本都是因为权限太低，或者相关依赖库版本不对应的原因。</p>
-<p>python2安装官方方法无法进行安装，暂时无法理解如何进行处理。<br>
-先放着。</p>
-<h1>安装basecrack</h1>
-<p>下载工具：<a target="_blank" rel="noopener" href="https://github.com/mufeedvh/basecrack">https://github.com/mufeedvh/basecrack</a><br>
-下载好包之后就可以直接进入到目录之后使用<code>pip install -r requirements.txt</code>进行安装。</p>
+<p>包含python3的pwntools的安装。<br>涉及到<a href="kali-pip3%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83.md">kali-pip3安装虚拟环境</a>中提升权限的问题。<br>一般安装不上东西基本都是因为权限太低，或者相关依赖库版本不对应的原因。</p>
+<p>python2安装官方方法无法进行安装，暂时无法理解如何进行处理。<br>先放着。</p>
+<h1 id="安装basecrack"><a href="#安装basecrack" class="headerlink" title="安装basecrack"></a>安装basecrack</h1><p>下载工具：<a target="_blank" rel="noopener" href="https://github.com/mufeedvh/basecrack">https://github.com/mufeedvh/basecrack</a><br>下载好包之后就可以直接进入到目录之后使用<code>pip install -r requirements.txt</code>进行安装。</p>
 <p>可能出现问题的主要在跟虚拟环境联合的时候：</p>
 <ul>
 <li>先进入到虚拟环境</li>
 <li>再进入到<code>basecrack</code>的目录之下</li>
 <li>使用<code>pip</code>相关命令进行安装</li>
 </ul>
-<p>具体使用方法见<code>readme.md</code><br>
-一般情况下会用<code>python3 basecrack.py -f [filename] -m</code>即可。<br>
-基本就能直接使用工具去解密base系列的题目了。</p>
-<h1>镜像文件简单分析</h1>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://github.com/volatilityfoundation/volatility">GitHub - volatilityfoundation/volatility: An advanced memory forensics framework</a></p>
+<p>具体使用方法见<code>readme.md</code><br>一般情况下会用<code>python3 basecrack.py -f [filename] -m</code>即可。<br>基本就能直接使用工具去解密base系列的题目了。</p>
+<h1 id="镜像文件简单分析"><a href="#镜像文件简单分析" class="headerlink" title="镜像文件简单分析"></a>镜像文件简单分析</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/volatilityfoundation/volatility">GitHub - volatilityfoundation&#x2F;volatility: An advanced memory forensics framework</a></p>
 </blockquote>
 <blockquote>
 <p>具体的思路需要梳理一下。</p>
 </blockquote>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">某公司服务器出现了数据泄露，请分析文件回答下列问题</span><br><span class="line"></span><br><span class="line">1、经检查，攻击者利用IPC漏洞监控了服务器，攻击者的IP地址的32位小写md5值即为答案。（如，攻击者ip地址为192.168.1.1，则答案为66efff4c945d3c3b87fc271b47d456db）</span><br><span class="line"></span><br><span class="line">答：2b714710cb93b5eb3295ff8b51819081</span><br><span class="line"></span><br><span class="line">2、攻击者利用服务器内用户命名规则创建了后门账号，请找出该后门账号，该账号的登录密码的32位小写md5值即是答案。（例：密码为123456，则答案为e10adc3949ba59abbe56e057f20f883e）</span><br><span class="line"></span><br><span class="line">答：5e8667a439c68f5145dd2fcbecf02209</span><br><span class="line"></span><br><span class="line">3、攻击者从服务器中窃取了一些个人敏感数据，请分析文件，找到包含的所有身份证信息(共5个)，并按照身份证首位数字从小到大进行排序顺序（首位数字相同则比较第二位数字，以此类推），并以-进行连接，最后计算其32位小写MD5值作为答案（例：身份证1：123456789；身份证2：987654321；身份证3：111111111，则身份证顺序：111111111-123456789-987654321，答案为：1f18992fb75aaa7f34c8b6583fb3ac1e）（注：题目中身份证信息等个人信息为出题需要编写，均为虚假信息，不具备真实性及效益。）</span><br><span class="line"></span><br><span class="line">答：140bc19db32fec044a87d6130eab854f</span><br></pre></td></tr></table></figure>
-<h2 id="了解镜像文件使用系统">了解镜像文件使用系统</h2>
-<ul>
-<li><code>vol.py -f [rawfile] imageinfo</code></li>
+<h2 id="了解镜像文件使用系统"><a href="#了解镜像文件使用系统" class="headerlink" title="了解镜像文件使用系统"></a>了解镜像文件使用系统</h2><ul>
+<li><code>vol.py -f [rawfile] imageinfo</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Suggested Profile(s) : Win7SP1x64, Win7SP0x64, Win2008R2SP0x64, Win2008R2SP1x64_24000, Win2008R2SP1x64_23418, Win2008R2SP1x64, Win7SP1x64_24000, Win7SP1x64_23418</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Suggested Profile(s) : Win7SP1x64, Win7SP0x64, Win2008R2SP0x64, Win2008R2SP1x64_24000, Win2008R2SP1x64_23418, Win2008R2SP1x64, Win7SP1x64_24000, Win7SP1x64_23418</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>基于服务器描述，主要选择的方向就是<code>Win2008</code>系列的，一般情况下，优先考虑相对靠前位置的操作系统。</p>
-<h3 id="netscan"><code>netscan</code></h3>
-<ul>
+<h3 id="netscan"><a href="#netscan" class="headerlink" title="netscan"></a><code>netscan</code></h3><ul>
 <li>查看网络连接</li>
 <li>查看当前系统IP</li>
 </ul>
-<h2 id="IPC漏洞控制服务器">IPC漏洞控制服务器</h2>
-<blockquote>
+<h2 id="IPC漏洞控制服务器"><a href="#IPC漏洞控制服务器" class="headerlink" title="IPC漏洞控制服务器"></a>IPC漏洞控制服务器</h2><blockquote>
 <p>题目中提示信息：攻击者利用IPC漏洞监控了服务器</p>
 </blockquote>
 <ul>
 <li>漏洞利用条件：开放了 139、445 端口和 ipc$ 文件共享，并且我们已经获取到用户登录账号和密码。</li>
 <li>主要这个漏洞在WinServer2008中好像比较典型</li>
 </ul>
-<h2 id="账号相关一般考虑注册表相关信息">账号相关一般考虑注册表相关信息</h2>
-<ul>
+<h2 id="账号相关一般考虑注册表相关信息"><a href="#账号相关一般考虑注册表相关信息" class="headerlink" title="账号相关一般考虑注册表相关信息"></a>账号相关一般考虑注册表相关信息</h2><ul>
 <li>hivelist</li>
-<li>hivedump：查看注册表键名
-<ul>
+<li>hivedump：查看注册表键名<ul>
 <li>试了一下暂且不能理解为啥需要这种命令，以及放的虚拟地址具体需要查看啥。</li>
 </ul>
 </li>
 <li>printkey</li>
 <li>hashdump</li>
 </ul>
-<h3 id="hivelist"><code>hivelist</code></h3>
-<ul>
+<h3 id="hivelist"><a href="#hivelist" class="headerlink" title="hivelist"></a><code>hivelist</code></h3><ul>
 <li>列出所有的注册表项及其虚拟地址和物理地址</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ntds.dit文件位置: C:\Windows\NTDS\NTDS.dit</span><br><span class="line">system文件位置:C:\Windows\System32\config\SYSTEM</span><br><span class="line">sam文件位置:C:\Windows\System32\config\SAM</span><br><span class="line">#通过SAM数据库获得用户hash的方法</span><br></pre></td></tr></table></figure>
-<p>在这一块基本找具体要分析的注册表的路径位置？<br>
-找比较可行的路径？<br>
-不太理解。</p>
-<h3 id="hivedump"><code>hivedump</code></h3>
-<ul>
+
+<p>在这一块基本找具体要分析的注册表的路径位置？<br>找比较可行的路径？<br>不太理解。</p>
+<h3 id="hivedump"><a href="#hivedump" class="headerlink" title="hivedump"></a><code>hivedump</code></h3><ul>
 <li>注册表相关信息罗列</li>
 </ul>
-<p>这边能找到一堆<code>user1</code>等相关账号，相对来说比较可疑。<br>
-所以能够定位到<code>\SAM\Domains\Account\Users\Names</code></p>
-<h3 id="printkey"><code>printkey</code></h3>
-<ul>
-<li>
-<p><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 printkey -K &quot;SAM\Domains\Account\Users\Names&quot;</code> 主要这边的路径去看具体内容，看不到F值，没法进行对比</p>
+<p>这边能找到一堆<code>user1</code>等相关账号，相对来说比较可疑。<br>所以能够定位到<code>\SAM\Domains\Account\Users\Names</code></p>
+<h3 id="printkey"><a href="#printkey" class="headerlink" title="printkey"></a><code>printkey</code></h3><ul>
+<li><p><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 printkey -K &quot;SAM\Domains\Account\Users\Names&quot;</code> 主要这边的路径去看具体内容，看不到F值，没法进行对比</p>
 </li>
-<li>
-<p>稍微往上一级去看具体内容</p>
+<li><p>稍微往上一级去看具体内容</p>
 </li>
-<li>
-<p><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 printkey -K &quot;SAM\Domains\Account\Users&quot;</code> 上一级可以查看目录下的具体参数</p>
+<li><p><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 printkey -K &quot;SAM\Domains\Account\Users&quot;</code> 上一级可以查看目录下的具体参数</p>
 </li>
-<li>
-<p>逐个进行<code>F</code>值的对比，跟<code>Administrator</code>进行对比</p>
+<li><p>逐个进行<code>F</code>值的对比，跟<code>Administrator</code>进行对比</p>
 </li>
-<li>
-<p><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 printkey -K &quot;SAM\Domains\Account\Users\000001F4&quot;</code>，Administrator</p>
+<li><p><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 printkey -K &quot;SAM\Domains\Account\Users\000001F4&quot;</code>，Administrator</p>
 </li>
-<li>
-<p><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 printkey -K &quot;SAM\Domains\Account\Users\000003F1&quot;</code>，user7</p>
+<li><p><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 printkey -K &quot;SAM\Domains\Account\Users\000003F1&quot;</code>，user7</p>
 </li>
-<li>
-<p>两者经过对比发现<code>F</code>值比较类似，所以高权限的后门账号是<code>user7</code></p>
+<li><p>两者经过对比发现<code>F</code>值比较类似，所以高权限的后门账号是<code>user7</code></p>
 </li>
-<li>
-<p><strong>补充</strong>：<code>printkey -K &quot;ControlSet001\Control\ComputerName\ComputerName&quot;</code>获取主机名</p>
+<li><p><strong>补充</strong>：<code>printkey -K &quot;ControlSet001\Control\ComputerName\ComputerName&quot;</code>获取主机名</p>
 </li>
 </ul>
-<h3 id="hashdump"><code>hashdump</code></h3>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://hello-ctf.com/HC_MISC/memory/#mimikatz">https://hello-ctf.com/HC_MISC/memory/#mimikatz</a><br>
-<a target="_blank" rel="noopener" href="https://wiki.wgpsec.org/knowledge/ctf/Volatility.html">【MISC】Volatility取证分析工具 | 狼组安全团队公开知识库</a></p>
+<h3 id="hashdump"><a href="#hashdump" class="headerlink" title="hashdump"></a><code>hashdump</code></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://hello-ctf.com/HC_MISC/memory/#mimikatz">https://hello-ctf.com/HC_MISC/memory/#mimikatz</a><br><a target="_blank" rel="noopener" href="https://wiki.wgpsec.org/knowledge/ctf/Volatility.html">【MISC】Volatility取证分析工具 | 狼组安全团队公开知识库</a></p>
 </blockquote>
 <ul>
 <li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 hashdump</code></li>
 <li>直接定位<code>user7</code>找到哈希值，然后上在线网站进行反向查找得到</li>
 <li><code>87654321</code></li>
 </ul>
-<h2 id="文件相关主要考虑利用可疑进程把数据dump下来">文件相关主要考虑利用可疑进程把数据dump下来</h2>
-<ul>
-<li>pstree/pslist</li>
+<h2 id="文件相关主要考虑利用可疑进程把数据dump下来"><a href="#文件相关主要考虑利用可疑进程把数据dump下来" class="headerlink" title="文件相关主要考虑利用可疑进程把数据dump下来"></a>文件相关主要考虑利用可疑进程把数据dump下来</h2><ul>
+<li>pstree&#x2F;pslist</li>
 <li>memdump</li>
 <li>editbox</li>
 <li>filescan</li>
 <li>dumpfile</li>
 </ul>
-<h3 id="pstree-pslist"><code>pstree/pslist</code></h3>
-<ul>
-<li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 pstree</code>，存在以下可疑进程
-<ul>
+<h3 id="pstree-pslist"><a href="#pstree-pslist" class="headerlink" title="pstree/pslist"></a><code>pstree/pslist</code></h3><ul>
+<li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 pstree</code>，存在以下可疑进程<ul>
 <li><code>notepad.exe</code>：txt</li>
-<li><code>et.exe</code>：xlsx/xls</li>
+<li><code>et.exe</code>：xlsx&#x2F;xls</li>
 <li><code>mspaint.exe</code>：原始数据<code>.data</code>型</li>
 </ul>
 </li>
 </ul>
-<h3 id="memdump"><code>memdump</code></h3>
-<ul>
+<h3 id="memdump"><a href="#memdump" class="headerlink" title="memdump"></a><code>memdump</code></h3><ul>
 <li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 memdump -p 952 -D vol_output</code></li>
 <li>得到的dmp文件修改后缀名为<code>.data</code></li>
 <li>使用<code>gimp</code>进行读取查看</li>
 <li>一般查看图片思路：<code>height</code>先确定，<code>offset</code>先找到大概有字符的部分，然后调整<code>width</code>使得图片正常显示</li>
 <li>得到<code>513701199912314701</code></li>
 </ul>
-<h3 id="editbox"><code>editbox</code></h3>
-<ul>
-<li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 editbox</code><br>
-直接能看到txt文件里面的内容。</li>
+<h3 id="editbox"><a href="#editbox" class="headerlink" title="editbox"></a><code>editbox</code></h3><ul>
+<li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 editbox</code><br>直接能看到txt文件里面的内容。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">张三    13528790688     430512198908131367</span><br><span class="line">李四    18234924149     310115199110257136</span><br></pre></td></tr></table></figure></li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">张三    13528790688     430512198908131367</span><br><span class="line">李四    18234924149     310115199110257136</span><br></pre></td></tr></table></figure>
-<h3 id="filescan"><code>filescan</code></h3>
-<ul>
+<h3 id="filescan"><a href="#filescan" class="headerlink" title="filescan"></a><code>filescan</code></h3><ul>
 <li>通过<code>grep</code>辅助查找关键文件类型</li>
-<li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 filescan | grep -E '|.txt|.xls|.xlsx' </code></li>
+<li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 filescan | grep -E &#39;|.txt|.xls|.xlsx&#39; </code></li>
 <li>但显示的有点奇奇怪怪的，找到关键文件之后结合<code>dumpfile</code>进行提取</li>
 </ul>
-<h3 id="dumpfile"><code>dumpfile</code></h3>
-<ul>
+<h3 id="dumpfile"><a href="#dumpfile" class="headerlink" title="dumpfile"></a><code>dumpfile</code></h3><ul>
 <li>导出某一文件(指定虚拟地址)</li>
 <li><code>vol.py -f data1.raw --profile=Win2008R2SP0x64 dumpfiles -Q 0x000000007eddf750 --dump-dir=vol_output</code></li>
 <li>或者<code>--dump-dir=</code>用<code>-D </code>替代</li>
@@ -490,6 +441,7 @@
 </ul>
 <p>查看<code>xlsx</code>里面的内容，可以得到：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">|客户姓名|身份证|</span><br><span class="line">|张伟|652901196611026716|</span><br><span class="line">|李星怡|123456202001011236|</span><br></pre></td></tr></table></figure>
+
 <p>然后按照要求进行拼接。</p>
 <p>后面主要涉及结合<code>gimp</code>去dump出来的图片。</p>
 

@@ -28,7 +28,7 @@
 <meta property="og:description" content="kali-2024版本，搭建python3的虚拟环境，在虚拟环境中可以直接调用pip3，否则在本地环境不太好用。 体感虚拟环境除了个要进入到虚拟环境这个操作，其他倒是和之前无虚拟环境用法一致。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-12-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-05T07:13:15.980Z">
+<meta property="article:modified_time" content="2024-12-05T07:13:15.000Z">
 <meta property="article:author" content="Eurynome">
 <meta property="article:tag" content="kali2024">
 <meta property="article:tag" content="pip3">
@@ -146,7 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">1.</span> <span class="nav-text">1. 创建虚拟环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">2.</span> <span class="nav-text">2. 使用pipx安装应用程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text">虚拟环境如何提高权限</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">1. 创建虚拟环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E4%BD%BF%E7%94%A8pipx%E5%AE%89%E8%A3%85%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F"><span class="nav-number">2.</span> <span class="nav-text">2. 使用pipx安装应用程序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E6%9D%83%E9%99%90"><span class="nav-number">3.</span> <span class="nav-text">虚拟环境如何提高权限</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -278,26 +278,31 @@
         <p><code>kali-2024</code>版本，搭建python3的虚拟环境，在虚拟环境中可以直接调用<code>pip3</code>，否则在本地环境不太好用。</p>
 <p>体感虚拟环境除了个要进入到虚拟环境这个操作，其他倒是和之前无虚拟环境用法一致。</p>
 <span id="more"></span><!--toc-->
+
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">error: externally-managed-environment</span><br><span class="line"></span><br><span class="line">× This environment is externally managed</span><br><span class="line">╰─&gt; To install Python packages system-wide, try apt install</span><br><span class="line">    python3-xyz, where xyz is the package you are trying to</span><br><span class="line">    install.</span><br><span class="line">    </span><br><span class="line">    If you wish to install a non-Kali-packaged Python package,</span><br><span class="line">    create a virtual environment using python3 -m venv path/to/venv.</span><br><span class="line">    Then use path/to/venv/bin/python and path/to/venv/bin/pip. Make</span><br><span class="line">    sure you have pypy3-venv installed.</span><br><span class="line">    </span><br><span class="line">    If you wish to install a non-Kali-packaged Python application,</span><br><span class="line">    it may be easiest to use pipx install xyz, which will manage a</span><br><span class="line">    virtual environment for you. Make sure you have pipx installed.</span><br><span class="line">    </span><br><span class="line">    For more information, refer to the following:</span><br><span class="line">    * https://www.kali.org/blog/python-externally-managed/</span><br><span class="line">    * /usr/share/doc/python3.12/README.venv</span><br><span class="line"></span><br><span class="line">note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.</span><br><span class="line">hint: See PEP 668 for the detailed specification.</span><br><span class="line"># </span><br></pre></td></tr></table></figure>
-<p>报错原因如上。<br>
-总之是为了避免冲突所以进行了限制。</p>
-<h1>1. 创建虚拟环境</h1>
-<p>创建一个虚拟环境，在该虚拟环境中可以自由使用<code>pip</code>进行相关库的安装而不影响系统级别的Python环境。</p>
+
+<p>报错原因如上。<br>总之是为了避免冲突所以进行了限制。</p>
+<h1 id="1-创建虚拟环境"><a href="#1-创建虚拟环境" class="headerlink" title="1. 创建虚拟环境"></a>1. 创建虚拟环境</h1><p>创建一个虚拟环境，在该虚拟环境中可以自由使用<code>pip</code>进行相关库的安装而不影响系统级别的Python环境。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install python3-env</span><br><span class="line">python3 -venv [虚拟环境名称]</span><br></pre></td></tr></table></figure>
+
 <p>激活虚拟环境</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> [虚拟环境名称]/bin/activate</span><br></pre></td></tr></table></figure>
+
 <p>进入到虚拟环境进行安装库</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install [库名]</span><br></pre></td></tr></table></figure>
+
 <p>退出虚拟环境</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-<h1>2. 使用pipx安装应用程序</h1>
-<blockquote>
+
+
+<h1 id="2-使用pipx安装应用程序"><a href="#2-使用pipx安装应用程序" class="headerlink" title="2. 使用pipx安装应用程序"></a>2. 使用pipx安装应用程序</h1><blockquote>
 <p>理论上，本身自己没有进行安装测试。</p>
 </blockquote>
 <p>安装命令行工具或者应用程序，希望全局可用，但不希望干扰到系统的python环境，可以使用<code>pipx</code>，首先安装一个<code>pipx</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install pipx</span><br><span class="line">pipx ensurepath</span><br><span class="line">pipx install [库名]</span><br></pre></td></tr></table></figure>
-<h1>虚拟环境如何提高权限</h1>
-<p>安装相关库的时候，往往需要高权限才能进行相关库的安装。</p>
+
+
+<h1 id="虚拟环境如何提高权限"><a href="#虚拟环境如何提高权限" class="headerlink" title="虚拟环境如何提高权限"></a>虚拟环境如何提高权限</h1><p>安装相关库的时候，往往需要高权限才能进行相关库的安装。</p>
 <ul>
 <li>先进入管理员权限</li>
 <li>然后使用<code>source []/bin/activate</code>进入到搭建的虚拟环境中</li>
